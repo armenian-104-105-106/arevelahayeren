@@ -144,6 +144,13 @@
   let current = 0;
   let questions = [];
   const originalForm = document.getElementById('quizForm').cloneNode(true);
+  
+  window.addEventListener('message', function(event) {
+    if (event.data.type === 'setHeight') {
+      const iframe = document.querySelector('iframe');
+      iframe.style.height = event.data.height + 'px';
+    }
+  });
 
   const scoring = {
     Baghdasar1: { Baghdasar: 1 },
