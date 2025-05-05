@@ -1,0 +1,302 @@
+<style>
+  #quiz-wrapper {
+    min-height: 700px;
+  }
+
+  @media (max-width: 600px) {
+    #quiz-wrapper {
+      min-height: 1000px;
+    }
+  }
+
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    padding: 20px;
+  }
+
+  #quiz {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .question {
+    display: none;
+  }
+
+  .question.active {
+    display: block;
+  }
+
+  #navigation {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #navigation button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #navigation button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  #navigation button:hover:enabled {
+    background-color: #45a049;
+  }
+
+  .progress-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .progress-container {
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    flex-grow: 1;
+    margin-right: 15px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #progressBar {
+    height: 100%;
+    width: 0%;
+    background: #4caf50;
+    transition: width 0.3s ease;
+  }
+
+  #progressText {
+    font-size: 14px;
+    color: #666;
+    white-space: nowrap;
+  }
+
+  label {
+    display: block;
+    margin: 8px 0;
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 600;
+  }
+</style>
+
+<div id="quiz-wrapper">
+  <div id="quiz">
+    <form id="quizForm">
+      <div class="progress-wrapper">
+        <div class="progress-container">
+          <div id="progressBar"></div>
+        </div>
+        <div id="progressText">1 / 2</div>
+      </div>
+
+      <div class="question active" data-index="0">
+        <p>Ստիպում են քեզ անել մի բան, որ չես ուզում, ինչպես կվարվե՞ս:</p>
+        <label><input type="radio" name="q1" value="Baghdasar1"> Կռիվ կանեմ</label><br>
+        <label><input type="radio" name="q1" value="Tsovinar1"> Կոմպրոմիսային լուծում կառաջարկեմ</label><br>
+        <label><input type="radio" name="q1" value="Khatun1"> Մի ձևով տակից դուրս կգամ</label><br>
+        <label><input type="radio" name="q1" value="Mher1"> Ուզածս բացահայտորեն կանեմ</label><br>
+      </div>
+
+      <div class="question" data-index="1">
+        <p>Ընկերդ շտապ օգնության կարիք ունի, բայց դու սոված ես, ի՞նչ կանես:</p>
+        <label><input type="radio" name="q2" value="Baghdasar1"> Արագ կուտեմ, հետո կգնամ </label><br>
+        <label><input type="radio" name="q2" value="Sanasar1"> Սոված-ծարավ կգնամ </label><br>
+        <label><input type="radio" name="q2" value="Mher1"> Ինձ հետ ուտելիք կվերցնեմ </label><br>
+        <label><input type="radio" name="q2" value="Davit1"> Մամայիս կասեմ՝ հետս ուտելիք դնի </label><br>
+      </div>
+
+      <div id="navigation">
+        <button type="button" id="backBtn" disabled>Հետ</button>
+        <button type="button" id="nextBtn" disabled>Առաջ</button>
+        <button type="submit" id="submitBtn" style="display:none;" disabled>Հաստատել</button>
+      </div>
+    </form>
+
+    <div id="result" style="display:none; margin-top: 20px; font-weight: bold;"></div>
+  </div>
+</div>
+
+<script>
+  let current = 0;
+  let questions = [];
+  const originalForm = document.getElementById('quizForm').cloneNode(true);
+
+  const scoring = {
+    Baghdasar1: { Baghdasar: 1 },
+    Sanasar1: { Sanasar: 1 },
+    Mher1: { Mher: 1 },
+    Davit1: { Davit: 1 },
+    Tsovinar1: { Tsovinar: 1 },
+    Khatun1: { Khatun: 1 }
+  };
+
+  const resultText = {
+    Baghdasar: "Բաղդասար",
+    Sanasar: "Սանասար",
+    Mher: "Մհեր",
+    Davit: "Դավիթ",
+    Tsovinar: "Ծովինար",
+    Khatun: "Խաթուն"
+  };
+
+  function updateProgressBar() {
+    const percent = (current / questions.length) * 100;
+    document.getElementById('progressBar').style.width = percent + '%';
+    document.getElementById('progressText').textContent = `${current + 1} / ${questions.length}`;
+    sendHeightToParent();
+  }
+
+  function showQuestion(index) {
+    questions.forEach((q, i) => {
+      q.classList.remove('active');
+      if (i === index) {
+        q.classList.add('active');
+      }
+    });
+
+    current = index;
+
+    document.getElementById('backBtn').disabled = (current === 0);
+
+    if (current === questions.length - 1) {
+      document.getElementById('nextBtn').style.display = 'none';
+      document.getElementById('submitBtn').style.display = 'inline-block';
+    } else {
+      document.getElementById('nextBtn').style.display = 'inline-block';
+      document.getElementById('submitBtn').style.display = 'none';
+    }
+
+    updateProgressBar();
+    checkAnswer(current);
+  }
+
+  function checkAnswer(index) {
+    const question = questions[index];
+    const name = question.querySelector('input[type=radio]').name;
+    const answered = document.querySelector(`input[name="${name}"]:checked`);
+
+    if (index === questions.length - 1) {
+      document.getElementById('submitBtn').disabled = !answered;
+    } else {
+      document.getElementById('nextBtn').disabled = !answered;
+    }
+  }
+
+  function restartQuiz() {
+    const quizContainer = document.getElementById('quiz');
+    quizContainer.innerHTML = '';
+    quizContainer.appendChild(originalForm.cloneNode(true));
+    quizContainer.appendChild(document.createElement('div')).id = 'result';
+
+    document.getElementById('result').style.display = 'none';
+    current = 0;
+
+    setupListeners();
+    showQuestion(current);
+  }
+
+  function setupListeners() {
+    questions = document.querySelectorAll('.question');
+
+    document.querySelectorAll('input[type=radio]').forEach(input => {
+      input.addEventListener('change', () => {
+        const index = parseInt(input.closest('.question').dataset.index);
+        checkAnswer(index);
+        updateProgressBar();
+      });
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      if (current < questions.length - 1) {
+        showQuestion(current + 1);
+      }
+    });
+
+    document.getElementById('backBtn').addEventListener('click', () => {
+      if (current > 0) {
+        showQuestion(current - 1);
+      }
+    });
+
+    document.getElementById('quizForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const unanswered = Array.from(questions).some(q => {
+        const name = q.querySelector('input[type=radio]').name;
+        return !document.querySelector(`input[name="${name}"]:checked`);
+      });
+
+      if (unanswered) {
+        alert("Խնդրում ենք պատասխանել բոլոր հարցերին:");
+        return;
+      }
+
+      const formData = new FormData(this);
+      const scores = {};
+      for (const key in resultText) {
+        scores[key] = 0;
+      }
+
+      for (let [_, answer] of formData.entries()) {
+        const points = scoring[answer];
+        if (points) {
+          for (let type in points) {
+            scores[type] += points[type];
+          }
+        }
+      }
+
+      const maxScore = Math.max(...Object.values(scores));
+      const tied = Object.entries(scores).filter(([_, score]) => score === maxScore);
+      const highest = tied[Math.floor(Math.random() * tied.length)];
+
+      document.getElementById('quiz').innerHTML = `
+        <div id="result" style="margin-top: 20px; font-weight: bold; font-size: 20px;">
+          ${resultText[highest[0]]}
+          <div style="margin-top: 20px;">
+            <button id="restartBtn" style="padding: 10px 20px; background-color: #4caf50; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Կրկին անցնել</button>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('restartBtn').addEventListener('click', restartQuiz);
+    });
+  }
+
+  questions = document.querySelectorAll('.question');
+  setupListeners();
+  showQuestion(current);
+
+  function sendHeightToParent() {
+    const height = document.documentElement.scrollHeight;
+    window.parent.postMessage({ type: 'setHeight', height }, '*');
+  }
+
+  window.addEventListener('load', sendHeightToParent);
+  const observer = new MutationObserver(sendHeightToParent);
+  observer.observe(document.body, { childList: true, subtree: true });
+</script>
