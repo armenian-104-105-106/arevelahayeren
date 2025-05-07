@@ -2,10 +2,8 @@
 <html lang="hy">
 <head>
   <meta charset="UTF-8" />
-  <!-- 1. VIEWPORT META -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- 2. BASE STYLES -->
   <style>
     /* Set a comfortable base font-size */
     html {
@@ -21,28 +19,20 @@
       box-sizing: border-box;
     }
     #intro {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: 1rem;
         text-align: center;
-        background: url('intro-bg.jpg') no-repeat center/cover;
-        padding: clamp(3rem, 10vw, 6rem) 1rem;
-        color: #fff;
-    }
-    #intro .container {
-        max-width: 36rem;
-        margin: 0 auto;
     }
     #intro h1 {
-        margin: 0 0 1rem;
+        margin: 0 0 0.5rem;
         font-size: clamp(2rem, 5vw, 3rem);
         line-height: 1.2;
+        color: #333;
     }
     #intro p {
         margin: 0;
         font-size: clamp(1rem, 2.5vw, 1.25rem);
         line-height: 1.5;
-        color: rgba(255, 255, 255, 0.85);
+        color: #555;
     }
     #quiz {
       width: 100%;
@@ -124,7 +114,6 @@
 <body>
 <div id="quiz">
     <section id="intro">
-        <div class="container">
           <h1>«Սասնա Ծռեր»-ի ո՞ր հերոսն ես դու</h1>
           <p>«Սասնա Ծռերի» ո՞ր հերոսն ես դու բնավորության թեստը կբցահայտի, թե հայ էպոսի հիմնական հերոսներից որի՛ կերպարին ես դու համապատասխան: 
             Խաղը կազմվել է UCLA-ի «հայ հասարակության և մշակույթ» առարկայի ուսանողների կողմից: 
@@ -134,8 +123,7 @@
             Ալեքս Եղիկյան, Արտակ Խաչատրյան, Գեղեցիկ Հովհաննիսյան, Մարինա Մանթաշյան, Կարինե Շահնաբաթյան, Էդվարդ Շանաքյան, Էրիկ Ջուհարյան, Հայարփի Սահակյան, Նարե Սեթանյան, Ջեքսոն Վաշբուրն
             <br><em>Նախագծի ղեկավարներ՝</em><br>
             Թերեզա Հովհաննիսյան, Մարիա Մարկոսյան</p>
-        </div>
-      </section>
+    </section>
     <hr>
     <br>
     <form id="quizForm">
