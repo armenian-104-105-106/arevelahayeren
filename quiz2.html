@@ -597,6 +597,15 @@
     const form     = document.getElementById('quizForm');
     const submitBtn= document.getElementById('submitBtn');
     const quizCont = document.getElementById('quiz');
+    const totalQuestions = document.querySelectorAll('.question').length;
+    
+    form.addEventListener('change', () => {
+      const allAnswered = Array.from({ length: totalQuestions }, (_, i) => {
+        return form.querySelector(`input[name="q${i + 1}"]:checked`);
+      }).every(Boolean);
+      
+      submitBtn.disabled = !allAnswered;
+    });
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
