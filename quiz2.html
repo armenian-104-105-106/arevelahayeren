@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>«Սասնա Ծռեր»-ի ո՞ր հերոսն ես դու — UCLA Արևելահայերեն</title>
+
+  <style>
+    html {
+      font-family: 'Segoe UI','Helvetica Neue',sans-serif;
+      font-size: 16px;            
+      background-color: white;
+      color: black;
+      margin: 0; padding: 0;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background-color: white;
+      color: black;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: linear-gradient(90deg, red, blue, orange);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      flex-wrap: wrap;
+    }
+
+    .nav-logo {
+      font-size: 1.75rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    #home {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    #home h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1rem;
+    }
+
+    #home p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      line-height: 1.6;
+    }
+
+    #intro {
+        padding: 1rem;
+        text-align: left;
+    }
+
+    #intro h1 {
+        margin: 0 0 0.5rem;
+        font-size: clamp(2rem, 5vw, 3rem);
+        line-height: 1.2;
+        color: black;
+    }
+
+    #intro p {
+        margin: 0;
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        line-height: 1.5;
+        color: gray;
+    }
+
+    #quiz {
+      width: 100%;
+      background: white;
+      padding: 1.25rem;            
+      box-sizing: border-box;
+    }
+
+    .question {
+      margin-bottom: 1.5rem;      
+    }
+
+    .question > p {
+      margin: 0;
+      font-weight: 600;
+      font-size: clamp(1rem, 2vw, 1.1rem);
+    }
+
+    label {
+      display: block;
+      line-height: 1.4;
+      margin: 0.625rem 0;          
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+    }
+
+    .translation {
+      display: block;
+      font-style: italic;
+      font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+      color: gray;
+      padding-left: 2.1em;
+      margin-top: 0.25rem;
+    }
+
+    .translation.question-translation {
+      padding-left: 0;
+    }
+
+    .answer-img {
+      display: block;
+      width: 100%;
+      max-width: 16rem;
+      height: auto;
+      margin-left: 2.1em;
+      margin-top: 0.25rem;
+      border-radius: 0.5rem;
+      border: 1px solid gray;
+    }
+
+    #submitBtn {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.375rem;
+      background-color: green;
+      color: white;
+      font-size: clamp(1rem, 2.5vw, 1.1rem);
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    #submitBtn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    .submit-wrapper {
+      margin-top: 1.25rem;
+      text-align: center;
+    }
+
+    #result {
+      display: none;
+      margin-top: 1.875rem;
+      font-weight: bold;
+      font-size: clamp(1.1rem, 3vw, 1.3rem);
+      text-align: center;
+    }
+
+    .hero-description {
+        margin-top: 1.5em;
+        padding: 1em;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        background: #fafafa;
+    }
+    .hero-description img {
+        max-width: 200px;
+        display: block;
+        margin: 0.5em auto;
+    }
+    .hero-description h2 {
+        text-align: center;
+        margin-bottom: 0.5em;
+        font-weight: 700;
+    }
+    .hero-description p .ita {
+        font-property: italic;
+    }
+
+    @media (max-width: 360px) {
+      #quiz { padding: 1rem; }
+      label { margin: 0.5rem 0; }
+      .answer-img { max-width: 14rem; }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+      }
+      .nav-links {
+        justify-content: center;
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-logo">UCLA Արևելահայերեն</div>
+    <div class="nav-links">
+      <a href="index.html">Գլխավոր</a>
+      <a href="quiz.html">«Սասնա Ծռեր»</a>
+      <a href="links.html">Հղումներ</a>
+    </div>
+  </nav>
+
+  <div id="quiz">
+      <section id="intro">
+        <h1>«Սասնա Ծռեր»-ի ո՞ր հերոսն ես դու</h1>
+        <br />
+        <p>«Սասնա Ծռերի» ո՞ր հերոսն ես դու բնավորության թեստը կբցահայտի, թե հայ էպոսի հիմնական հերոսներից որի՛ կերպարին ես դու համապատասխան: 
+          Խաղը կազմվել է UCLA-ի «հայ հասարակության և մշակույթ» առարկայի ուսանողների կողմից: 
+          Հուսով ենք՝ այս թեստը կօգնի հետաքրքրություն առաջացնելու «Սասնա ծռեր» էպոսի նկատմամբ և հնարավորություն կտա բացահայտելու ինքներդ Ձեզ։ 
+          Թեստը կազմվել է ոչ էպոսագետ ուսանողների սուբյեկտիվ կարծիքի հիման վրա և կարող է չհամապատասխանել ձեր կարծիքներին և սպասելիքներին։
+          <br/><br/><em>Հեղինակներ՝</em><br/>
+          Ալեքս Եղիկյան, Արտակ Խաչատրյան, Գեղեցիկ Հովհաննիսյան, Մարինա Մանթաշյան, Կարինե Շահնաբաթյան, Էդվարդ Շանաքյան, Էրիկ Ջուհարյան, Հայարփի Սահակյան, Նարե Սեթանյան, Ջեքսոն Վաշբուրն
+          <br/><br/><em>Նախագծի Առաջնորդներ</em><br/>
+          Թերեզա Հովհաննիսյան, Մարիա Մարկոսյան</p>
+      </section>
+
+      <br/>
+      <br/>
+
+      <form id="quizForm">
+        <div class="question">
+          <p>1. Ո՞րն է քո համար առաջնային:</p>
+          <p class="translation question-translation">What matters most to you?</p>
+
+          <label><input type="radio" name="q1" value="PMher1"> Հայրենիքի պարտականությունը<br/><span class="translation">Duty to my homeland</span></label>
+          <label><input type="radio" name="q1" value="Melik1"> Անձնական բարեկեցությունը<br/><span class="translation">Personal well-being</span></label>
+          <label><input type="radio" name="q1" value="Tsovinar1"> Ընտանիքս<br/><span class="translation">Family</span></label>
+          <label><input type="radio" name="q1" value="Davit1"> Սերը<br/><span class="translation">Love</span></label>
+        </div>
+
+        <div class="question">
+          <p>2. Ընկերներդ քեզ ո՞նց կնկարագրեն։</p>
+          <p class="translation question-translation">How would your friends describe you?</p>
+
+          <label><input type="radio" name="q2" value="Tsovinar1"> Իմաստուն<br/><span class="translation">Wise</span></label>
+          <label><input type="radio" name="q2" value="Baghdasar1"> Միամիտ<br/><span class="translation">Naive</span></label>
+          <label><input type="radio" name="q2" value="Khatun1"> Սրամիտ<br/><span class="translation">Cunning</span></label>
+          <label><input type="radio" name="q2" value="MMher1"> Կրթված<br/><span class="translation">Educated</span></label>
+        </div>
+
+        <div class="question">
+          <p>3. Ընկերդ շտապ օգնության կարիք ունի, բայց դու սոված ես, ի՞նչ կանես:</p>
+          <p class="translation question-translation">Your friend needs urgent help, but you're hungry. What would you do?</p>
+          
+          <label><input type="radio" name="q3" value="Baghdasar1"> Արագ կուտեմ, հետո կգնամ<br/><span class="translation">I'd eat quickly, then go</span></label>
+          <label><input type="radio" name="q3" value="Sanasar1"> Սոված-ծարավ կգնամ<br/><span class="translation">I'd go hungry</span></label>
+          <label><input type="radio" name="q3" value="MMher1"> Ինձ հետ ուտելիք կվերցնեմ<br/><span class="translation">I'd take food with me</span></label>
+          <label><input type="radio" name="q3" value="Davit1"> Մամայիս կասեմ՝ հետս ուտելիք դնի<br/><span class="translation">I'd ask my mom to pack food for me</span></label>
+          <label><input type="radio" name="q3" value="Melik1"> Հանգիստ ինձ համար կուտեմ, երբ հարմար լինի, կգնամ<br/><span class="translation">I'd enjoy my meal and leave whenever it's convenient</span></label>
+        </div>
+
+        <div class="question">
+          <p>4. Ո՞ր զբաղմունքը կընտրեիր:</p>
+          <p class="translation question-translation">How would you choose to spend your free time?</p>
+
+          <label><input type="radio" name="q4" value="MMher1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1bdohUxC1OZmD7uTq01KWocweqrINUpn0=w300"></label>
+          <label><input type="radio" name="q4" value="Davit1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/18uMULayvYeYT8zjrUe2ykl9lQz70-lJz=w300"></label>
+          <label><input type="radio" name="q4" value="Melik1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1TXWUqVwwWXTIAknMcaOzIpp89EAT1vxS=w300"></label>
+          <label><input type="radio" name="q4" value="Tsovinar1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1BBgU9V5P49OHsto-6yN79GZAeJgd3CzX=w300"></label>
+        </div>
+
+        <div class="question">
+          <p>5. Ո՞ր գերբնական ուժը կընտրեիր:</p>
+          <p class="translation question-translation">Which superpower would you choose?</p>
+          
+          <label><input type="radio" name="q5" value="Tsovinar1"> Ջուր կառավարել<br/><span class="translation">Water-bending</span></label>
+          <label><input type="radio" name="q5" value="PMher1"> Անտեսանելի լինել<br/><span class="translation">Invisibility</span></label>
+          <label><input type="radio" name="q5" value="Baghdasar1"> Գերդիմադրողականություն ունենալ (փամփուշտներ չեն ազդում, կամ վերքերը արագ բուժվում են)<br/><span class="translation">Super-immunity (bullets don't affect you, or wounds heal quickly)</span></label>
+          <label><input type="radio" name="q5" value="Khatun1"> Հիպնոզ <br/><span class="translation">Mind control</span></label>
+        </div>
+
+        <div class="question">
+          <p>6. Գիշերը վատ երազ ես տեսնում: Ի՞նչ կանես:</p>
+          <p class="translation question-translation">You wake up from a bad dream, what do you do?</p>
+          
+          <label><input type="radio" name="q6" value="Sanasar1"> Զգույշ կլինեմ օրվա ընթացքում<br/><span class="translation">I'd be careful throughout the day</span></label>
+          <label><input type="radio" name="q6" value="Baghdasar1"> Կպատմեմ ընկերոջս<br/><span class="translation">I'd tell my friend about it</span></label>
+          <label><input type="radio" name="q6" value="Melik1"> Սնահավատություններին կարևորություն չեմ տալիս<br/><span class="translation">I don't give importance to superstitions</span></label>
+          <label><input type="radio" name="q6" value="Khatun1"> Կդիմեմ երազահան ծանոթիս <br/><span class="translation">I'd ask my dream interpreter</span></label>
+        </div>
+
+        <div class="question">
+          <p>7. Այս ուտեստներից ո՞րը կընտրես:</p>
+          <p class="translation question-translation">Which of these foods would you choose?</p>
+          
+          <label><input type="radio" name="q7" value="Davit1"> Հարիսա <br/><span class="translation">Harissa</span><img class="answer-img" src="https://lh3.googleusercontent.com/d/1PdVRRgJBCjeLnUmuDwMpbHAYYm1i-Ti5=w300"></label>
+          <label><input type="radio" name="q7" value="MMher1"> Հաց ու ղավուրմա<br/><span class="translation">br/ead and Ghavurma</span><img class="answer-img" src="https://lh3.googleusercontent.com/d/1myuJTZ7phHb8LFlunET60fkl1cM9iHEg=w300"></label>
+          <label><input type="radio" name="q7" value="Melik1"> Քնաֆեհ<br/><span class="translation">Knafeh</span><img class="answer-img" src="https://lh3.googleusercontent.com/d/1ONg7161S4MHlk8Q1SAowaIVTRhRo0FEf=w300"></label>
+        </div>
+
+        <div class="question">
+          <p>8. Հարազատիցդ նեղացել ես, ի՞նչ կանես:</p>
+          <p class="translation question-translation">You're upset with a loved one. What would you do?</p>
+          
+          <label><input type="radio" name="q8" value="PMher1"> Կփակվեմ սենյակումս ու հետը չեմ խոսի<br/><span class="translation">I'd lock myself in my room and not talk to them</span></label>
+          <label><input type="radio" name="q8" value="Baghdasar1"> Կուզենամ հետը կռվել<br/><span class="translation">I'd feel like fighting with them</span></label>
+          <label><input type="radio" name="q8" value="Sanasar1"> Կփորձեմ խոսել, իրավիճակը պարզաբանել<br/><span class="translation">I'd try to talk things through and clear the air</span></label>
+          <label><input type="radio" name="q8" value="Davit1"> Հացադուլ կհայտարրեմ <br/><span class="translation">I'd go on hunger strike</span></label>
+        </div>
+
+        <div class="question">
+          <p>9. Ընտրի՛ր մի կենդանի:</p>
+          <p class="translation question-translation">Choose an animal.</p>
+          
+          <label><input type="radio" name="q9" value="Davit1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1HbH29VBE7cDTud4T6loD5ytvP5pmxpRK=w300"></label>
+          <label><input type="radio" name="q9" value="MMher1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1p4M0X4RiO6K3xraZBQEkYVKeRkWALbeW=w300"></label>
+          <label><input type="radio" name="q9" value="PMher1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1wkvFA_yovD2na0CEYUp0QP1cwbMoP46D=w300"></label>
+          <label><input type="radio" name="q9" value="Khatun1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1w4EwX1zs0fEEuUZ7QNvAsXNGsEHiWA2y=w300"></label>
+        </div>
+
+        <div class="question">
+          <p>10. Ինչի՞ ես պատրաստ քո սիրելիին հասնելու համար:</p>
+          <p class="translation question-translation">What are you willing to do to reach your lover?</p>
+          
+          <label><input type="radio" name="q10" value="PMher1"> Կռվել 60 հոգու հետ<br/><span class="translation">Fight 60 people</span></label>
+          <label><input type="radio" name="q10" value="SanasarBaghdasar05"> Կռվել վիշապի հետ միայն քարերով<br/><span class="translation">Battle a dragon with stones only</span></label>
+          <label><input type="radio" name="q10" value="PMher1"> Կռվել սիրելիիդ ընտանիքի թշնամու հետ<br/><span class="translation">Fight the enemy of my lover's family</span></label>
+          <label><input type="radio" name="q10" value="PMher1"> Աշխարհը շուռ տալ նրան գտնելու համար<br/><span class="translation">Turn the world upside-down to find him/her</span></label>
+          <label><input type="radio" name="q10" value="Melik1"> Նշվածներից ոչ մեկը<br/><span class="translation">I'm not willing to do any of these</span></label>
+        </div>
+
+        <div class="question">
+          <p>11. Ո՞ր արձանն է քեզ ամենաշատը դուր գալիս:</p>
+          <p class="translation question-translation">Which statue do you like most?</p>
+          
+          <label><input type="radio" name="q11" value="Tsovinar1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/11axjEOINFUNsbxyL8LzQwosirJMQUb85=w300"></label>
+          <label><input type="radio" name="q11" value="Davit1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1kz6xmi5ZtKRkSTlBOEcGKaLIJC3BXjso=w300"></label>
+          <label><input type="radio" name="q11" value="PMher1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1Z6LTwsuAO4cXERe4LxmunqoXqUOD1rgl=w300"></label>
+          <label><input type="radio" name="q11" value="MMher1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1JEuwhav9OZXI7k7a3hB1BEcaW8LzsLi-=w300"></label>
+        </div>
+
+        <div class="question">
+          <p>12. Քեզ չեն սիրում, ինչո՞ւ:</p>
+          <p class="translation question-translation">You are not well-liked. Why?</p>
+          
+          <label><input type="radio" name="q12" value="Tsovinar1"> Ինձ լավ չեն ճանաչում<br/><span class="translation">They don't know me well</span></label>
+          <label><input type="radio" name="q12" value="Davit1"> Որովհետև իրենցից լավն եմ<br/><span class="translation">Because I'm better than them</span></label>
+          <label><input type="radio" name="q12" value="Sanasar1"> Որովհետև շատ հմայիչ եմ<br/><span class="translation">Because I'm too charming</span></label>
+        </div>
+
+        <div class="question">
+          <p>13. Երկու հոգի կռվում են, ի՞նչ կանես:</p>
+          <p class="translation question-translation">Two people are fighting. What would you do?</p>
+          
+          <label><input type="radio" name="q13" value="Melik1"> Չեմ խառնվի, իմ գործը չէ<br/><span class="translation">I wouldn't interfere, it's none of my business</span></label>
+          <label><input type="radio" name="q13" value="Tsovinar1"> Կփորձեմ հաշտեցնել<br/><span class="translation">I'd help them reconcile</span></label>
+          <label><input type="radio" name="q13" value="Baghdasar1"> Կռվողներից մեկը հաստատ ես կլինեմ<br/><span class="translation">I'm one of the people fighting</span></label>
+          <label><input type="radio" name="q13" value="Khatun1"> Մեղավոր կողմին կհամոզեմ, որ զիջի<br/><span class="translation">I'd convince one of them to concede</span></label>
+        </div>
+
+        <div class="question">
+          <p>14. Ի՞նչ է որսորդությունը քեզ համար:</p>
+          <p class="translation question-translation">What does hunting mean to you?</p>
+          
+          <label><input type="radio" name="q14" value="SanasarBaghdasar05"> Ուտելիքի հայթայթման միջոց<br/><span class="translation">A means of obtaining food</span></label>
+          <label><input type="radio" name="q14" value="MMher1"> Մարզաձև<br/><span class="translation">Sport</span></label>
+          <label><input type="radio" name="q14" value="Tsovinar1"> Դեմ եմ կենդանիներին վնասելուն<br/><span class="translation">I'm against harming animals</span></label>
+          <label><input type="radio" name="q14" value="Khatun1"> Անտարբեր եմ<br/><span class="translation">It means nothing to me</span></label>
+        </div>
+
+        <div class="question">
+          <p>15. Գրպանի փող վաստակելու համար ի՞նչ գործ կանեիր:</p>
+          <p class="translation question-translation">What would you do for a quick buck?</p>
+          
+          <label><input type="radio" name="q15" value="Sanasar1"> Ընդունարանի աշխատող<br/><span class="translation">Receptionist</span><img class="answer-img" src="https://lh3.googleusercontent.com/d/1H35vBqs2huVg0hnQirFXmruG3wQ08pZl=w300"></label>
+          <label><input type="radio" name="q15" value="Baghdasar1"> Գինապետ<br/><span class="translation">Winemaker</span><img class="answer-img" src="https://lh3.googleusercontent.com/d/12g4YymcWEVu97xUHwufM_8gF-hfAheXZ=w300"></label>
+          <label><input type="radio" name="q15" value="Davit1"> Գառնարած<br/><span class="translation">Shephard</span><img class="answer-img" src="https://lh3.googleusercontent.com/d/1J2o0wG-EAGEtI9NF5I1IzOKUeXt0bT5n=w300"></label>
+          <label><input type="radio" name="q15" value="MMher1"> Գազանանոցի աշխատող<br/><span class="translation">Zookeeper</span><img class="answer-img" src="https://lh3.googleusercontent.com/d/1pB4JQ0MYA20uzjXmZ0otctcMlsVfNufg=w300"></label>
+        </div>
+
+        <div class="question">
+          <p>16. Ինչպե՞ս կարձագանքես, եթե տնօրենդ ասի․ «Վաղը՝ ժամը 5-ին, քո բաժնի տարեկան հաշվետվությունը սեղանիս դրված լինի»:</p>
+          <p class="translation question-translation">Your boss tells you that your department's annual report must be on her desk by 5 o'clock tomorrow. What would you do?</p>
+          
+          <label><input type="radio" name="q16" value="Sanasar1"> Թիմ կկազմեմ, ու միասին կաշխատենք<br/><span class="translation">I'd form a team and work with them</span></label>
+          <label><input type="radio" name="q16" value="Baghdasar1"> Կջղայնանամ ու գործից դուրս կգամ<br/><span class="translation">I'd get upset and quit my job</span></label>
+          <label><input type="radio" name="q16" value="Davit1"> Անմիջապես կսկսեմ աշխատանքը, որ հասցնեմ<br/><span class="translation">I'd begin immediately to finish on time</span></label>
+          <label><input type="radio" name="q16" value="Tsovinar1"> Կփորձեմ բանակցել, որ վերջնաժամկետը երկարաձգի<br/><span class="translation">I'd ask for an extension</span></label>
+          <label><input type="radio" name="q16" value="PMher1"> Ոչինչ էլ չեմ անի, որովհետև անհնար է հասցնել այդ ժամկետում<br/><span class="translation">I'd do nothing because it's impossible to complete it on time</span></label>
+        </div>
+
+        <div class="question">
+          <p>17. Ի՞նչ կուզենայիք, որ մարդիկ ձեր մասին ասեին:</p>
+          <p class="translation question-translation">What would you like people to say about you?</p>
+          
+          <label><input type="radio" name="q17" value="Tsovinar1"> Իր ընտանիքին նվիրված մարդ է<br/><span class="translation">You're devoted to family</span></label>
+          <label><input type="radio" name="q17" value="Khatun1"> Ճարպիկ, հնարամիտ է<br/><span class="translation">You're resourceful, crafty</span></label>
+          <label><input type="radio" name="q17" value="Sanasar1"> Ստեղծող, արարող մարդ է<br/><span class="translation">You're creative, inventive</span></label>
+          <label><input type="radio" name="q17" value="Baghdasar1"> Վստահելի, հուսալի հենարան է<br/><span class="translation">You're trustworthy, reliable</span></label>
+          <label><input type="radio" name="q17" value="MMher1"> Քեֆ անող մարդ է<br/><span class="translation">You're a party animal</span></label>
+          <label><input type="radio" name="q17" value="PMher1"> Զգայուն մարդ է<br/><span class="translation">You're sentimental</span></label>
+          <label><input type="radio" name="q17" value="Melik1"> Բոլորը դողում են նրա ուժի առաջ<br/><span class="translation">Everyone trembles at your might</span></label>
+        </div>
+
+        <div class="question">
+          <p>18. Եթե սառնարանը բացես ու տեսնես, որ եղբայրդ իր համար առել է քո ամենասիրելի տորթից, ի՞նչ կանես:</p>
+          <p class="translation question-translation">What would you do if you opened the fridge and saw your br/other bought your favorite cake for himself?</p>
+          
+          <label><input type="radio" name="q18" value="Melik1"> Առանց երկմտելու կուտեմ<br/><span class="translation">I'd eat it without a second thought</span></label>
+          <label><input type="radio" name="q18" value="MMher1"> Կուտեմ, բայց հետո կփոշմանեմ<br/><span class="translation">I'd eat it, then regret it</span></label>
+          <label><input type="radio" name="q18" value="Sanasar1"> Չեմ ուտի, իմը չէ<br/><span class="translation">I won't eat it, it's not mine</span></label>
+          <label><input type="radio" name="q18" value="Tsovinar1"> Կսպասեմ, կհարցնեմ, նոր կուտեմ<br/><span class="translation">I'd ask for permission to eat it</span></label>
+          <label><input type="radio" name="q18" value="Khatun1"> Կուտեմ, բայց իր համար նորը կառնեմ<br/><span class="translation">I'd eat it, then buy a new one for him</span></label>
+        </div>
+
+        <div class="question">
+          <p>19. Որտե՞ղ կցանկանայիր ապրել։</p>
+          <p class="translation question-translation">Where would you want to live?</p>
+            
+          <label><input type="radio" name="q19" value="Melik1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1pMZNG1Kqu0RJHPwTUXD_-iEuh3dxW4tL=w300"></label>
+          <label><input type="radio" name="q19" value="Baghdasar1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/18t3Y4RUkPKSAea3v8BepKW1FX6nr9PpC=w300"></label>
+          <label><input type="radio" name="q19" value="PMher1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1dmqEZxcsPTCVt2XvtzdU8a_ccvGqTvGe=w300"></label>
+          <label><input type="radio" name="q19" value="Davit1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1QP1tYwpqc-9pvcGKlzmcwLnUIjIiPYM2=w300"></label>
+          <label><input type="radio" name="q19" value="Khatun1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/11_dbVqHTs-CiGM6-Alt8uKJXCL5ujNIK=w300"></label>
+        </div>
+
+        <div class="question">
+          <p>20. Անձնական կյանքում ի՞նչ դժվարություններ ես ունեցել:</p>
+          <p class="translation question-translation">What obstacles have you faced in your personal life?</p>
+          
+          <label><input type="radio" name="q20" value="MMher1"> Իմ ունեցածի արժեքը հասկանալ, գնահատել <br/><span class="translation">Understanding and appreciating the value of what I have</span></label>
+          <label><input type="radio" name="q20" value="SanasarBaghdasar05"> Հարմարվել օտար երկրում, հայրենիքից դուրս<br/><span class="translation">Adjusting to life in a foreign country</span></label>
+          <label><input type="radio" name="q20" value="PMher1"> Խնդիրներ ծնողների հետ<br/><span class="translation">Issues with my parents</span></label>
+          <label><input type="radio" name="q20" value="Khatun1"> Սովորել ինքնաբավ լինել<br/><span class="translation">Learning to be self-sufficient</span></label>
+          <label><input type="radio" name="q20" value="Melik1"> «Երկրորդը լինելու» համախտանիշ<br/><span class="translation">2nd place syndrome</span></label>
+        </div>
+
+        <div class="submit-wrapper">
+          <button type="submit" id="submitBtn" disabled>Հաստատել</button>
+        </div>
+      </form>
+    <div id="result"></div>
+  </div>
+  <script>
+    const scoring = {
+        Baghdasar1: { Baghdasar: 1 },
+        Sanasar1: { Sanasar: 1 },
+        MMher1: { MMher: 1 },
+        PMher1: { PMher: 1 },
+        Davit1: { Davit: 1 },
+        Tsovinar1: { Tsovinar: 1 },
+        Khatun1: { Khatun: 1 },
+        Melik1: { Melik: 1 },
+        SanasarBaghdasar05: { Sanasar: 0.5, Baghdasar: 0.5 },
+    };
+
+    const resultText = {
+        Baghdasar: "Բաղդասար",
+        Sanasar: "Սանասար",
+        MMher: "Մեծ Մհեր",
+        PMher: "Փոքր Մհեր",
+        Davit: "Դավիթ",
+        Tsovinar: "Ծովինար",
+        Khatun: "Խաթուն",
+        Melik: "Մսրա Մելիք",
+    };
+
+    const heroDescriptions = {
+    Baghdasar: `
+        <div class="hero-description">
+            <h2>Բաղդասար</h2>
+            <img src="images/baghdasar.jpg" alt="Baghdasar">
+            <p>
+            <strong>Առաստաղալի հերոս</strong> Բաղդասարը հայտնի է իր աննկուն հավատարմությամբ։
+            Նա ընկերության մեջ միշտ կանգ է առնում որպեսզի օգնի անախորժության պահին։
+            </p>
+            <ul>
+            <li>Խիզախություն ու տոկունություն</li>
+            <li>Անմնացորդ նվիրվածություն</li>
+            <li>Ընկերասիրություն</li>
+            </ul>
+        </div>
+        `,
+        Sanasar: `
+        <div class="hero-description">
+            <h2>Սանասար</h2>
+            <img src="images/sanasar.jpg" alt="Sanasar">
+            <p>
+            Սանասարը հմտորեն առաջնորդում է իր զինվորներին՝
+            ցույց տալով գերազանց ռազմարվեստ եւ խելամիտ ռազմավարություններ։
+            </p>
+        </div>
+        `,
+        MMher: `
+        <div class="hero-description">
+            <h2>Սանասար</h2>
+            <img src="images/sanasar.jpg" alt="Sanasar">
+            <p>
+            Սանասարը հմտորեն առաջնորդում է իր զինվորներին՝
+            ցույց տալով գերազանց ռազմարվեստ եւ խելամիտ ռազմավարություններ։
+            </p>
+        </div>
+        `,
+        PMher: `
+        <div class="hero-description">
+            <h2>Սանասար</h2>
+            <img src="images/sanasar.jpg" alt="Sanasar">
+            <p>
+            Սանասարը հմտորեն առաջնորդում է իր զինվորներին՝
+            ցույց տալով գերազանց ռազմարվեստ եւ խելամիտ ռազմավարություններ։
+            </p>
+        </div>
+        `,
+        Davit: `
+        <div class="hero-description">
+            <h2>Սանասար</h2>
+            <img src="images/sanasar.jpg" alt="Sanasar">
+            <p>
+            Սանասարը հմտորեն առաջնորդում է իր զինվորներին՝
+            ցույց տալով գերազանց ռազմարվեստ եւ խելամիտ ռազմավարություններ։
+            </p>
+        </div>
+        `,
+        Tsovinar: `
+        <div class="hero-description">
+            <h2>Սանասար</h2>
+            <img src="images/sanasar.jpg" alt="Sanasar">
+            <p>
+            Սանասարը հմտորեն առաջնորդում է իր զինվորներին՝
+            ցույց տալով գերազանց ռազմարվեստ եւ խելամիտ ռազմավարություններ։
+            </p>
+        </div>
+        `,
+        Khatun: `
+        <div class="hero-description">
+            <h2>Սանասար</h2>
+            <img src="images/sanasar.jpg" alt="Sanasar">
+            <p>
+            Սանասարը հմտորեն առաջնորդում է իր զինվորներին՝
+            ցույց տալով գերազանց ռազմարվեստ եւ խելամիտ ռազմավարություններ։
+            </p>
+        </div>
+        `,
+        Melik: `
+        <div class="hero-description">
+            <img src="images/sanasar.jpg" alt="Sanasar">
+            <h2>Դու Մսրա Մելիքն ես</h2>
+            <p class="ita">
+            Դու ուժեղ և նպատակասլաց անձնավորություն ես: Քեզ օրենքները չեն հետաքրքրում և քո նպատակներին հասնելու համար, պատրաստ ես ամեն ինչ անելու:  Քեզ համար առաջնային է նաև անձնական բարեկեցությունը և քո հեղինակությունը: Ուզում ես ամեն տեղ առաջինը լինել, դրա պատճառով ունես երկրորդը լինելու բարդույթ: Դու ազդեցիկ մարդ ես և կարևորում ես քաջությունը, բայց ինքդ հոգու խորքում վախեր ունես:
+            </p>
+            <p class="ita>
+            Դավիթ չը գնաց, չ’անցավ թրի տակով,<br>
+            Կըշտով անցավ.<br>
+            Ճկութ քսվավ ի ջարդու քար՝<br>
+            Քարեն կրա՛կ էլավ։<br>
+            <br>
+            Մըսրա Մելիք տեսավ՝<br>
+            Շա՛տ վախեցավ, ասաց.<br>
+            — Էդ դեռ պստիկ է՝ էսպես է—<br>
+            Որ մեծանա՝ ի՞նչ տի ըլնի։<br>
+            </p>
+            <p>
+            Մսրա Մելիքի կերպարը մեզ հանդիպում է «Սասնա Ծռեր» էպոսի երկորդ ճյուղում, երբ Իսմիլ Խաթունը խաբեությամբ որդի է ունենում Մեծ Մհերից՝ նրան 7 տարի իր մոտ հարբած պահելուց հետո: Խաթունը իր ոդու անունը դնում է Մելիք իր մահացած ամուսնու պատվին: Մսրա Մելիքը հակապատկերն է Սասունցի հերոսների՝ արդար ու ազնիվ հերոսների, նա մարմնավորում է հին աշխարհի դաժան ու նենգ իշխանի: Մսրա Մելիքը մեզ հիշեցնում է, թե ինչ է լինում, երբ իշխանությունը կառուցվում է ոչ թե վստահության ու պատվի, այլ սարսափի ու կեղծիքի վրա։ 
+            </p>
+            <p class="ita>
+            Մըսրա Մելիք որ իմացավ Սասնա Մհեր մեռե՝<br>
+            Կալնավ, թուղթ ուղարկեց,<br>
+            Իր տեղաց մեջ ցրվեց, զորք հավաքեց,<br>
+            Գնաց Սասնա տեղաց վերան.<br>
+            Սասնա էրկրի վերա իր սուր քաշեց,<br>
+            Սասնա ժողովուրդ կոտորեց,<br>
+            Անհաշիվ խարջ ու խարաջ առավ,<br>
+            Քըշեց Սասնա տավար, օչխար,<br>
+            Սասուն ավրեց, առ ու ավար արավ։<br>
+            </p>
+            <p>
+            Մելիքը գիտի իր ուզածը և չի փոշմանում կամ երկմտում որոշում կայացնելիս, նույնիսկ եթե իր որոշումը կարող է ուրիշներին վնասել: Մելիքը կարևորություն չի տալիս հավատարմությանը կամ ուրիշներին օգնության հասնելուն: Չի ուզում ընդունել, որ իրենից ուժեղները շատ են։ Միշտ ուզում է լինել բոլորից առավել և պատրաստ է անարդար միջոցներով հաղթահարել իր դժվարությունները: Մելիքը մեծանում է Դավթի հետ որպես ավագ եղբայր և հաճախ փորձում նրա հետ մրցել կամ Դավթին վնասել՝ հասկանով, որ Դավիթը իրենից ուժեղ է:
+            </p>
+            <p class="ita">
+            — Է, մարե ,— ասաց Մըսրա Մելիք,—<br>
+            Ուրիշներ իմ գուրզի տակն ընկնեն, կը մեռնեն։<br>
+            Դավիթ բռնեց իմ գուրզ ու չը մեռավ։<br>
+            Չէ՛, մարե, ես չեմ ընդունի.<br>
+            Դավթի վիզ տի կտրեմ։<br>
+            </p>
+        </div>
+        `,
+    };
+
+    const form     = document.getElementById('quizForm');
+    const submitBtn= document.getElementById('submitBtn');
+    const quizCont = document.getElementById('quiz');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // 1. Score calculation (same as before)…
+        const formData = new FormData(form);
+        const scores = Object.keys(resultText).reduce((o,k)=> (o[k]=0,o), {});
+        for (let [, ans] of formData.entries()) {
+        const pts = scoring[ans] || {};
+        for (let h in pts) scores[h] += pts[h];
+        }
+
+        // 2. Determine winner
+        const max = Math.max(...Object.values(scores));
+        const winners = Object.entries(scores).filter(([,s])=> s===max);
+        const [winner] = winners[Math.floor(Math.random() * winners.length)];
+
+        // 3. Hide quiz
+        form.style.display = 'none';
+        submitBtn.style.display = 'none';
+
+        // 4. Inject formatted HTML
+        const container = document.createElement('div');
+        container.innerHTML = heroDescriptions[winner] || `<p>${resultText[winner]}</p>`;
+        quizCont.appendChild(container);
+    });
+  </script>
+</body>
+</html>
