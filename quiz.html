@@ -12,6 +12,7 @@
       background-color: white;
       color: black;
       margin: 0; padding: 0;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -91,6 +92,18 @@
         color: gray;
     }
 
+    form {
+        margin-top: 1.5em;
+        padding: 1em;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        background: #fafafa;
+        padding-inline: clamp(1rem, 5vw, 3rem);
+        /* center and constrain overall width, if you like */
+        max-width: 800px;
+        margin-inline: auto;
+    }
+
     #quiz {
       width: 100%;
       background: white;
@@ -168,6 +181,45 @@
       text-align: center;
     }
 
+    .hero-description {
+        margin-top: 1.5em;
+        padding: 1em;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        background: #fafafa;
+        padding-inline: clamp(1rem, 5vw, 3rem);
+        /* center and constrain overall width, if you like */
+        max-width: 800px;
+        margin-inline: auto;
+    }
+    .hero-description img {
+        max-width: 500px;
+        display: block;
+        margin: 1em auto;
+        margin-bottom: 2em;
+    }
+    .hero-description h2 {
+        text-align: center;
+        margin-bottom: 0;
+        font-weight: 700;
+    }
+    .hero-description h3 {
+        text-align: center;
+        margin: 0;
+        font-weight: 700;
+    }
+    .hero-description .ita {
+        font-style: italic;
+    }
+    .hero-description .quote {
+        font-style: italic;
+        text-align: center;
+    }
+    .hero-description .trans {
+      font-size: 0.9em;
+      margin-top: 2px;
+    }
+
     @media (max-width: 360px) {
       #quiz { padding: 1rem; }
       label { margin: 0.5rem 0; }
@@ -186,6 +238,17 @@
     }
   </style>
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XZL56RTWPK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XZL56RTWPK');
+</script>
+
 <body>
   <nav>
     <div class="nav-logo">UCLA Արևելահայերեն</div>
@@ -249,7 +312,7 @@
           <p>4. Ո՞ր զբաղմունքը կընտրեիր:</p>
           <p class="translation question-translation">How would you choose to spend your free time?</p>
 
-          <label><input type="radio" name="q4" value="MMher1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1bdohUxC1OZmD7uTq01KWocweqrINUpn0=w300"></label>
+          <label><input type="radio" name="q4" value="MMher1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1kz0MHcKbKEYav_wycnSugChRTWX1Bpb_=w300"></label>
           <label><input type="radio" name="q4" value="Davit1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/18uMULayvYeYT8zjrUe2ykl9lQz70-lJz=w300"></label>
           <label><input type="radio" name="q4" value="Melik1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1TXWUqVwwWXTIAknMcaOzIpp89EAT1vxS=w300"></label>
           <label><input type="radio" name="q4" value="Tsovinar1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1BBgU9V5P49OHsto-6yN79GZAeJgd3CzX=w300"></label>
@@ -280,8 +343,8 @@
           <p class="translation question-translation">Which of these foods would you choose?</p>
           
           <label><input type="radio" name="q7" value="Davit1"> Հարիսա <br/><span class="translation">Harissa</span><img class="answer-img" src="https://lh3.googleusercontent.com/d/1PdVRRgJBCjeLnUmuDwMpbHAYYm1i-Ti5=w300"></label>
-          <label><input type="radio" name="q7" value="MMher1"> Հաց ու ղավուրմա<br/><span class="translation">br/ead and Ghavurma</span><img class="answer-img" src="https://lh3.googleusercontent.com/d/1myuJTZ7phHb8LFlunET60fkl1cM9iHEg=w300"></label>
-          <label><input type="radio" name="q7" value="Melik1"> Քնաֆեհ<br/><span class="translation">Knafeh</span><img class="answer-img" src="https://lh3.googleusercontent.com/d/1ONg7161S4MHlk8Q1SAowaIVTRhRo0FEf=w300"></label>
+          <label><input type="radio" name="q7" value="MMher1"> Հաց ու ղավուրմա<br/><span class="translation">Bread and Ghavurma</span><img class="answer-img" src="https://lh3.googleusercontent.com/d/1myuJTZ7phHb8LFlunET60fkl1cM9iHEg=w300"></label>
+          <label><input type="radio" name="q7" value="MelikKhatun05"> Քնաֆեհ<br/><span class="translation">Knafeh</span><img class="answer-img" src="https://lh3.googleusercontent.com/d/1ONg7161S4MHlk8Q1SAowaIVTRhRo0FEf=w300"></label>
         </div>
 
         <div class="question">
@@ -407,7 +470,7 @@
           <label><input type="radio" name="q19" value="Baghdasar1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/18t3Y4RUkPKSAea3v8BepKW1FX6nr9PpC=w300"></label>
           <label><input type="radio" name="q19" value="PMher1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1dmqEZxcsPTCVt2XvtzdU8a_ccvGqTvGe=w300"></label>
           <label><input type="radio" name="q19" value="Davit1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/1QP1tYwpqc-9pvcGKlzmcwLnUIjIiPYM2=w300"></label>
-          <label><input type="radio" name="q19" value="Khatun1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/11_dbVqHTs-CiGM6-Alt8uKJXCL5ujNIK=w300"></label>
+          <label><input type="radio" name="q19" value="Khatun1"><img class="answer-img" src="https://lh3.googleusercontent.com/d/122F2FPpeZGOgBGDg4ijNTycyOwNmzImG=w300"></label>
         </div>
 
         <div class="question">
@@ -427,36 +490,1067 @@
       </form>
     <div id="result"></div>
   </div>
-
   <script>
     const scoring = {
-      Baghdasar1: { Baghdasar: 1 },
-      Sanasar1: { Sanasar: 1 },
-      MMher1: { MMher: 1 },
-      PMher1: { PMher: 1 },
-      Davit1: { Davit: 1 },
-      Tsovinar1: { Tsovinar: 1 },
-      Khatun1: { Khatun: 1 },
-      Melik1: { Melik: 1 },
-      SanasarBaghdasar05: { Sanasar: 0.5, Baghdasar: 0.5 },
-      };
-
-    const resultText = {
-      Baghdasar: "Բաղդասար",
-      Sanasar: "Սանասար",
-      MMher: "Մեծ Մհեր",
-      PMher: "Փոքր Մհեր",
-      Davit: "Դավիթ",
-      Tsovinar: "Ծովինար",
-      Khatun: "Խաթուն",
-      Melik: "Մսրա Մելիք",
+        Baghdasar1: { Baghdasar: 1 },
+        Sanasar1: { Sanasar: 1 },
+        MMher1: { MMher: 1 },
+        PMher1: { PMher: 1 },
+        Davit1: { Davit: 1 },
+        Tsovinar1: { Tsovinar: 1 },
+        Khatun1: { Khatun: 1 },
+        Melik1: { Melik: 1 },
+        SanasarBaghdasar05: { Sanasar: 0.5, Baghdasar: 0.5 },
+        MelikKhatun05: { Melik: 0.5, Khatun: 0.5 }
     };
 
-    const form = document.getElementById('quizForm');
-    const submitBtn = document.getElementById('submitBtn');
-    const resultBox = document.getElementById('result');
-    const totalQuestions = document.querySelectorAll('.question').length;
+    const resultText = {
+        Baghdasar: "Բաղդասար",
+        Sanasar: "Սանասար",
+        MMher: "Մեծ Մհեր",
+        PMher: "Փոքր Մհեր",
+        Davit: "Դավիթ",
+        Tsovinar: "Ծովինար",
+        Khatun: "Խաթուն",
+        Melik: "Մսրա Մելիք",
+    };
 
+    const heroDescriptions = {
+        Baghdasar: `
+          <div class="hero-description">
+            <h2 style>Դու Բաղդասարն ես</h2>
+            <h3>You are Baghdasar</h3>
+            <img src="https://lh3.googleusercontent.com/d/1xC7LLQVO9j0d7DcqCxr4T3MSAzIenFis=w300">
+            <p class="ita">
+              Դու դյուրաբորբոք, տաքարյուն անձնավորություն ես ու հեշտ ես նյարդայնանում։ 
+            </p>
+            <p class="ita trans">
+              You are a naive and hot-headed individual who is easily rattled.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+              Էն իրիկուն Սանասար դրսեն էկավ տուն.<br>
+              Բարեւ էտու, Բաղդասար չառավ։<br>
+              Ասաց.— Ա՛ղբեր, ինչի՞ ես նեղացե։<br>
+              Բաղդասար ասաց Սանասարին.<br>
+              <strong>— Կամ ես քեզ տի սպանեմ, կամ դու՝ ինձ։</strong><br>
+              Սանասար հարցուց.— Ինչո՞ւ, պատճառ ինչ։<br>
+              — Ապա ինչո՞ւ Քաջանց թագավորի աղջիկ<br>
+              Էրկու դիր քե՛զ բարեւ գրե, մեկ դիր՝ ինձ։<br>
+              Ասաց.— Ա՛ղբեր, բա ի՞նչ անեմ, էն է գրե։<br>
+              <strong>— Չէ, ասաց, ես դու տի կռվե՛նք։</strong><br>
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="ita">
+              Միևնույն ժամանակ դու շատ վստահելի ու հուսալի հենարան ես և քո հարազատներին օգնում ես առանց երկմտելու։ 
+            </p>
+            <p class="trans">
+                At the same time you are a very trustworthy, reliable person and always help your close ones without hesitation.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+                Բաղդսաարն էլ Սասուն էր։<br>
+                Էն մեկ առավոտուն էլավ, կը լվացվեր,<br>
+                Աչք ընկավ Սանասարի մատնիք,<br>
+                Ինչ աղբեր աղբոր հետ փոխարկեր էր։<br>
+                Տեսավ՝ մատնիք մատին սեւցեր է։<br>
+                <strong>— Ահա, ասաց, շտապեք, իմ ձին քաշեք դո՛ւրս.<br>
+                Ես հեծնիմ, էրթամ իմ եղբոր հասնիմ։</strong><br>
+                Էլավ դուրս, տեսավ՝ ա՛մպն մթներ է։<br>
+                Էկավ տո՛ւն, ասաց.— Հեյ-վա՜խ, հեյ-վախ, մարե՛,<br>
+                Իմ աղբեր շատ նեղութնի մեջ է։<br>
+                Հարցուց.— Դու ի՞նչպես գիտես։<br>
+                — Մեկ հալվոր մարդ մի մեզ նշանց էտար,<br>
+                Ասաց՝ Երբ էս ամպ կը մթնի,<br>
+                Դուք էրկու աղբեր՝ որ մեկտեղ չեք ըլնի,<br>
+                Իմացեք, որ մեկըն նեղ տեղն է.<br>
+                <strong>Իրարու օգնություն հասեք։<br>
+                Ես շուտ տ’էրթամ, հասնեմ։</strong><br>
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="ita">
+              Բացի այդ, դու կարողանում ես օտար վայրերում հեշտ հարմարվել ու քո օջախը ստեղծել։
+            </p>
+            <p class="trans">
+                Additionally, you can easily adapt to foreign places and make your home anywhere you please.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+                <strong>Էսպես իրենց բերդ շինեցին։</strong><br>
+                Ջոջ ջոջ քարեր կը բերեին հրեշալի,<br>
+                Վարպետների հետ էլ մեկտեղ կը բանեին։<br>
+                Էնոնք էնքան զորեղ էին,<br>
+                Որ քարե սան քարե սուն զարկին, ձագ թալեցին։<br>
+                Մեկ տարի բոլոր էնոնք էսպես աշխատեցին,<br>
+                Մեկ տարին որ լրացավ,<br>
+                <strong>Նոր էնոնց բերդն ու տուն էկավ գլուխ։<br>
+                Դարձան փոքրիկ, էկեղեցի մ’էլ շինեցին։</strong><br>
+                Մնաց բերդի ու տան անուն։<br>
+            </p>
+            <p style="text-align: center">***</p>
+            <p>
+              Բաղդասարը «Սասնա ծռեր» էպոսի առաջին ճյուղի հերոսներից մեկն է, որը ծնվում է երբ իր մայրը՝ Ծովինարը սուրբ ավազանից կես բուռ ջուր է խմում։ Նա իր եղբոր՝ Սանասարի հետ կառուցում է մի հսկա ամրոց և հիմնադրում է Սասուն քաղաքը: Որոշ ժամանակ անց կռվում է մի վիշապի հետ և նրան սպանելով՝ փրկում է արքայադուստր Արմաղանին, որի հետ ամուսնանում է։ Ի վերջո Բաղդասարը կնոջ հետ տեղափոխվում է Բաղդադ, որտեղ ապրում են մինչև մահ։
+            </p>
+            <p class="trans">
+              Baghdasar is one of the heroes of the first cycle of the epic Daredevils of Sassoun, who is born when his mother, Tsovinar, drinks half a handful of water from a sacred pool. Along with his brother, Sanasar, he builds a great fortress and founds the town of Sassoun. Some time later, he battles a dragon and by slaying it, saves the princess Armaghan, whom he marries. Eventually, Baghdasar moves to Baghdad with his wife, where he lives until his death.
+            </p>
+            <hr>
+            <h2>Իմանալ ավելին</h2>
+            <h3>Learn more</h3>
+            <p>
+              «Սասնա ծռեր» էպոսը արտացոլում է հայ ժողովրդի հերոսական ոգին և անդադար պայքարը՝ հանուն հայրենիքի պաշտպանության և ազգային ինքնության պահպանման։ Ստեղծվել է 8–9-րդ դարերին։ Էպոսի հերոսները միայն թշնամիներին հակազդող մարտիկներ չէին, այլ նաև նվիրված էին իրենց ժողովրդին՝ օգնելով առօրյա կյանքում առաջացած խնդիրների և գործերի լուծման մեջ։ Թեև նրանք օժտված էին գերբնական ուժերով, նրանց կերպարները պատմության էջերում առանձնանում են իրենց մարդասիրությամբ, անկեղծությամբ և երբեմն էլ միամտությամբ։
+            </p>
+            <p class="trans">
+              The Daredevils of Sassoun epic reflects the heroic spirit of the Armenian people and their ongoing struggle to defend their homeland and preserve their national identity. It was created during the 8th–9th centuries. The heroes of the epic were not only warriors who fought against enemies, but were also devoted to their people, always prepared to lend a helping hand. Even though they had supernatural strength, they stood out in history for their kindness, honesty, and even occasionally their naivety.
+            </p>
+            <p>
+              Էպոսը կազմված է չորս ճյուղեից,  որոնցից յուրաքանչյուրը կոչվել է տվյալ ճյուղի  գլխավոր հերոսի անունով՝ «Սանասար և Բաղդասար», «Մեծ Մհեր», «Սասունցի Դավիթ» և «Փոքր Մհեր»։ Այս չորս ճյուղերը ներկայացնում են չորս սերունդներ, որոնք իրար հետ կապված են ազգակցական կապերով։ «Սասնա ծռեր» էպոսը ծագել է հայկական լեռնաշխարհի հին քաղաքներից մեկում՝ Սասունում, որտեղից էլ ստացել է իր անունը։ Սասունցիները հայտնի էին իրենց հայրենասիրությամբ, հողի նկատմամբ առանձնահատուկ սիրով, ինչպես նաև որոշ չափով յուրահատուկ՝ «ծուռ» բնավորությամբ, որն էլ հաճախ երևում է էպոսի հերոսների վարքագծում։
+            </p>
+            <p class="trans">
+              The epic is made up of four branches, each named after the main hero of that section: Sanasar and Baghdasar, Great Mher (the First) , David of Sassoun, and Little Mher (the Second). These four branches represent the stories of members from four generations of a family. The epic originated in one of the ancient towns of the Armenian Highlands, Sassoun, which is also where it gets its name. The people of Sassoun were known for their love and respect for their homeland and uniquely “stubborn” character, which is also seen in the behavior of the epic’s heroes.
+            </p>
+            <p>
+              Էպոսը փոխանցվել է բանավոր ձևով՝ տարբեր պատումների միջոցով, որոնք պահպանվել են հայոց աշխարհի տարբեր շրջաններում։ Առանձնանում են Մշո, Մոկաց և Սասնա պատումները։ Համահավաքը՝ այսինքն էպոսի տարբեր պատումների հիման վրա կազմված միացյալ տարբերակը, նպատակ ունի ներկայացնելու էպոսի ամբողջական կառուցվածքը՝ առանց տարածաշրջանային տարբերակների բաշխման։ Էպոսի համահավաք տարբերակը հրատարակվել է 1874 թվականին։ Հետագայում համահավաքի կազմման աշխատանքներն իրականացվել են Մանուկ Աբեղյանի ղեկավարությամբ՝ մի խումբ գիտնականների մասնակցությամբ, որոնք համադրել են պատումները և ձևավորել մեկ ամբողջական տեքստ։
+            </p>
+            <p class="trans">
+              The epic was passed down orally through different versions preserved in various regions of historical Armenia. The main known versions are from Mush, Mokk, and Sassoun. The hamahavak (unified version), which combines different versions of the epic into one complete structure, was created to present the full story without separating it by regional variants. The unified version of the epic was published in 1874. Later, the compilation of the hamahavak was led by Manuk Abeghyan with a team of scholars who collected and organized the different versions into one complete text.
+            </p>
+            <p>
+              <em>«Սասնա ծռեր» էպոսի ո՞ր հերոսն ես դու</em> խաղը ստեղծվել է վերոնշյալ համահավաք բնագրի հիման վրա։ 
+            </p>
+            <p class="trans">
+              The quiz <em>Which Daredevils of Sassoun Hero Are You?</em> was created based on this unified version of the epic.
+            </p>
+            <br>
+            <p><b>Տեսանյութներ (Videos)</b></p>
+              <p><a href="https://youtu.be/_VJkXAykIOQ?si=h3_--vQ393w4FIjE">«Սասնա ծռեր» էպոս – համառոտ տեսանյութ</a></p>
+              <p><a href="https://www.youtube.com/watch?v=I-BKvMHILtw&ab_channel=%3A%D4%B2%D5%B8%D6%82%D5%B6TV">«Սասնա ծռեր» էպոսի պատումները – Հայկ Համբարձումյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=GGAP8cKCeD0&ab_channel=ShoghakatTVcompany">Ո՞ր բնագրով կարդալ էպոսը - Հայկ Համբարձումյան և Արքմենիկ Նիկողոսյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=Y1KLupAE94Q&ab_channel=ShoghakatTVcompany">«Սասնա ծռեր» էպոսի հայտնությունը - Հայկ Համբարձումյան և Արքմենիկ Նիկողոսյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=kudxQSW8blM&ab_channel=ShoghakatTVcompany">Էպոսի արդիականությունը - Հայկ Համբարձումյան և Ազատ Եղյազարյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=L51LsAiNU2c&ab_channel=ShoghakatTVcompany">«Սասնա ծռեր» էպոսի նոր համահավաք բնագիրը - Անահիտ Մարգարյանի և Հայկ Համբարձումյանի զրույցը</a></p>
+              <p><a href="https://www.youtube.com/watch?v=w5fqEx3xHzk&ab_channel=evnmag">Հարցուփորձ #1 | Էպոսագետ Հայկ Համբարձումյանը՝ «Սասնա ծռերի» մասին</a></p>
+            <p><b>Ֆիլմեր (Films)</b></p>
+              <p><a href="https://youtu.be/qXnTOE22d4g?si=m2ZID71rvwzXEIPv">«Սասունցի Դավիթ» մուլտֆիլմ</a></p>
+              <p><a href="https://youtu.be/0nxmzC9aoTs?si=MNW6oKt_yQ4kX9gi">«Ճանապարհ դեպի Սասունցի Դավիթ» – ֆիլմ</a></p>
+            <p><b>Հոդվածներ (Articles)</b></p>
+              <p><a href="https://agbu.org/am/node/6483">Armenian Super Heroes - Lusine Minasyan (AGBU)</a></p>
+              <p><a href="https://melinezhamkochyanblog.wordpress.com/2021/11/19/%D5%BD%D5%A1%D5%BD%D5%B6%D5%A1-%D5%AE%D5%BC%D5%A5%D6%80%E2%80%A4-%D5%BE%D5%A5%D6%80%D5%AC%D5%B8%D6%82%D5%AE%D5%B8%D6%82%D5%A9%D5%B5%D5%B8%D6%82%D5%B6/">Սասնա ծռեր․ վերլուծություն - Մխիթար Սեբաստացի կրթահամալիր «Ավագ դպրոց»-ի 12-րդ դասարանի աշակերտուհի Մելինե Ժամկոչյան</a></p>
+              <p><a href="https://www.academia.edu/5669112/%D5%84%D5%AB_%D5%A4%D5%AB%D5%BF%D5%A1%D6%80%D5%AF%D5%B8%D6%82%D5%B4_%D4%BD%D5%A1%D5%B9_%D5%8A%D5%A1%D5%BF%D5%A1%D6%80%D5%A1%D5%A6%D5%AB%D5%AB_%D5%BE%D5%A5%D6%80%D5%A1%D5%A2%D5%A5%D6%80%D5%B5%D5%A1%D5%AC_A_note_on_Xa%C4%8D_Patarazi_">Մի դիտարկում Խաչ Պատարազիի վերաբերյալ (A note on Xač‘ Patarazi) - Հրաչ Մարտիրոսյան</a></p>
+              <p><a href="https://surl.lu/vjoezf">«Վահագնի երգը» և հայկական էպոսը (նոր տեսակետ հայկական էպոսի ծագման և ձևավորման վերաբերյալ)․ The "song of Vahagn" and the Armenian epic (a new view on the origin and formation of the Armenian epic)) - Արմեն Պետրոսյան</a></p>              
+            <p><b>Գրքեր (Books)</b></p>
+              <p><a href="http://publishing.ysu.am/files/Sasna_Tsrer.pdf">Սասնա Ծռեր. պատում, մոտիվ, գրքային ավանդույթ – լիարժեք PDF բնագիր՝ Հայկ Համբարձումյանի խմբագրությամբ, ԵՊՀ հրատարակություն, 2018</a></p>
+              <p><a href="https://www.goodreads.com/book/show/59741253">Ազատ Եղիազարյան. «Սասնա ծռեր» էպոսի պոետիկան, «Անթարես» հրատ., 2013: հայերենից թարգմանեց Ս. Պիտեր Քաուին, Կոստա Մեսա, Կալիֆորնիա, «Մազդա» հրատ., 2008</a></p>
+            <p><b>Աուդիոգրքեր (Audiobooks)</b></p>
+              <p><a href="https://www.youtube.com/watch?v=LIs5gnlWxEk&ab_channel=IrinaMinasyan">Daredevils of Sassoun / Sasuntsi Davit / Armenian heroic epic poem - Իրինա Մինասյան։ Համահավաքի սկզբի մասը, որը ներառում է առաջին ճյուղի մի հատված։</a></p>
+              <p><a href="https://youtube.com/playlist?list=PL9GY4_i2mPxXrfQKevbX-b66FVNm3wsxK&si=moa1Hl1ZWO7VM6nh">«Սասնա ծռեր» (պատում) - Ռադիո Հեքիաթ։ Սա պատում է, համահավաքը չէ։</a></p>
+              <p><a href="https://www.youtube.com/watch?v=LUoLSSfo61c&ab_channel=AlphaNewsArmeniannewsnetwork">«Սասնա Ծռեր» – «Սասունցի Դավիթ»։ Սա միայն մի հատված է։</a></p>
+            <p><b>Նկարներ (Images)</b></p>
+              <p>Նկարները գեներացվել են ChatGPT 4.0 մոդելի կողմից:</p>
+              <p class="trans">Images were generated with the ChatGPT 4.0 model.</p>
+        </div>        `,
+        Sanasar: `
+        <div class="hero-description">
+            <h2 style>Դու Սանասարն ես</h2>
+            <h3>You are Sanasar</h3>
+            <img src="https://lh3.googleusercontent.com/d/1MG1-kanW7MK6LZjqrPdEawbsMsi571hp=w300">
+            <p class="ita">
+              Դու համարձակ, վճռական և արդարամիտ մարդ ես։ Չես վախենում վտանգից, անգամ երբ միայնակ ես մնում ճակատագրական մարտերի մեջ։ Դու առանց վարանելու օգնության ես հասնում հարազատներիդ և օտարների՝ չակնկալելով փոխհատուցում։ Միշտ փորձում ես խնդիրները խաղաղ ճանապարհով լուծել և մարդկանց հասկանալ։ Քեզ համար առաջնային արժեքներն են ընտանիքը, արդարությունը և համերաշխությունը։ Վտանգի պահին երբեք չես նահանջում ու գործում ես խելացի, բայց առանց պարծենալու։  
+            </p>
+            <p class="ita trans">
+              You are brave, strong-willed and fair. You are not afraid of danger, even when you are facing it alone. You help both loved ones and strangers with no expectations in return. You try to understand others and remain calm when faced with adversity. Family, fairness and peace matter most to you. Even in difficult situations, you never retreat and handle things with wisdom. 
+            </p>
+            <p>
+              Սանասարը «Սասնա Ծռեր» էպոսի առաջին ճյուղի երկու գլխավոր հերոսներից մեկն է։ Նա Բաղդասարի եղբայրն է և Ծովինարի որդին։ Սանասարը ծնվում է հրաշքով՝ Կաթնով կոչվող աղբյուրի ջրից։
+            </p>
+            <p class="trans">
+              Sanasar is one of the two main heroes in the first part of the epic Daredevils of Sassoun. He is Baghdasar’s brother and the son of Tsovinar. Sanasar is born miraculously, from the spring water, Katnov:
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+              Մի բուռ լիք ջուր խմեց,<br>
+              Սեկ էլ՝ մի բուռ կիսատ:<br>
+              Աղբուրըն ցամաքավ:<br>
+              Էդ էրկու բուռ ջրից հղացավ: <br>
+            </p>
+            <p style="text-align: center">***</p>
+            <p>
+              Սա խորհրդանշում է նրա ծագման առասպելական բնույթը։ Նրա առաջին սխրանքներից է վիշապի դեմ մենակ պայքարելը։
+            </p>
+            <p class="trans">
+                This shows his legendary and magical origin. One of his first heroic acts was fighting alone against the dragon:
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+                Գուրզ մի զարկեց վեր վիշապի գլխուն.<br>
+                Վիշապ զինք թափ էտու,<br>
+                Ակ բերնեն թռավ, գնաց մեջ դաշտին։<br>
+                Վիշապ զինք թափ էտու, ջուր էլից քաղաք.<br>
+                Ինչպես անձրև գա, էնպես զքաղաք էթաց.—<br>
+                Ծով կատաղավ, վիշապ քամի քաղաք եղավ։ <br>
+            </p>
+            <p style="text-align: center">***</p>
+            <p>
+              Մեջբերումը վկայում է Սանասարի քաջության, ուժի և վճռականության մասին։ Երբ եղբայրը՝ Բաղդասարը, օգնության կարիք ուներ, Սանասարը սոված-ծարավ ճանապարհ ընկավ: 
+            </p>
+            <p class="trans">
+                This shows Sanasar’s bravery, strength and determination. When his brother Baghdasar needed help, Sanasar immediately ran to his side, despite being hungry.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+                Սանասար համբեր չարավ.<br>
+                Էլավ, ինքն իր ձին քաշեց դուրս,<br>
+                Հեծավ, աչք խփեց է բաց, հասցուց մոր մոտ։<br>
+                — Մարե, ո՞ւր է իմ աղբեր Բաղդասար։ <br>
+            </p>
+            <p style="text-align: center">***</p>
+            <p>
+              Նրա համար ընտանիքն առաջնային արժեք ունի։ Սանասարի կերպարը մարմնավորում է «Սասնա Ծռեր» էպոսի դյուցազնական արժեքները՝ քաջություն, հավատարմություն, արդարություն և խոհեմություն։
+            </p>
+            <p class="trans">
+              For him, family is the most important thing. Sanasar’s character represents the heroic values of Daredevils of Sassoun: courage, loyalty, fairness and wisdom.
+            </p>
+                        <hr>
+            <h2>Իմանալ ավելին</h2>
+            <h3>Learn more</h3>
+            <p>
+              «Սասնա ծռեր» էպոսը արտացոլում է հայ ժողովրդի հերոսական ոգին և անդադար պայքարը՝ հանուն հայրենիքի պաշտպանության և ազգային ինքնության պահպանման։ Ստեղծվել է 8–9-րդ դարերին։ Էպոսի հերոսները միայն թշնամիներին հակազդող մարտիկներ չէին, այլ նաև նվիրված էին իրենց ժողովրդին՝ օգնելով առօրյա կյանքում առաջացած խնդիրների և գործերի լուծման մեջ։ Թեև նրանք օժտված էին գերբնական ուժերով, նրանց կերպարները պատմության էջերում առանձնանում են իրենց մարդասիրությամբ, անկեղծությամբ և երբեմն էլ միամտությամբ։
+            </p>
+            <p class="trans">
+              The Daredevils of Sassoun epic reflects the heroic spirit of the Armenian people and their ongoing struggle to defend their homeland and preserve their national identity. It was created during the 8th–9th centuries. The heroes of the epic were not only warriors who fought against enemies, but were also devoted to their people, always prepared to lend a helping hand. Even though they had supernatural strength, they stood out in history for their kindness, honesty, and even occasionally their naivety.
+            </p>
+            <p>
+              Էպոսը կազմված է չորս ճյուղեից,  որոնցից յուրաքանչյուրը կոչվել է տվյալ ճյուղի  գլխավոր հերոսի անունով՝ «Սանասար և Բաղդասար», «Մեծ Մհեր», «Սասունցի Դավիթ» և «Փոքր Մհեր»։ Այս չորս ճյուղերը ներկայացնում են չորս սերունդներ, որոնք իրար հետ կապված են ազգակցական կապերով։ «Սասնա ծռեր» էպոսը ծագել է հայկական լեռնաշխարհի հին քաղաքներից մեկում՝ Սասունում, որտեղից էլ ստացել է իր անունը։ Սասունցիները հայտնի էին իրենց հայրենասիրությամբ, հողի նկատմամբ առանձնահատուկ սիրով, ինչպես նաև որոշ չափով յուրահատուկ՝ «ծուռ» բնավորությամբ, որն էլ հաճախ երևում է էպոսի հերոսների վարքագծում։
+            </p>
+            <p class="trans">
+              The epic is made up of four branches, each named after the main hero of that section: Sanasar and Baghdasar, Great Mher (the First) , David of Sassoun, and Little Mher (the Second). These four branches represent the stories of members from four generations of a family. The epic originated in one of the ancient towns of the Armenian Highlands, Sassoun, which is also where it gets its name. The people of Sassoun were known for their love and respect for their homeland and uniquely “stubborn” character, which is also seen in the behavior of the epic’s heroes.
+            </p>
+            <p>
+              Էպոսը փոխանցվել է բանավոր ձևով՝ տարբեր պատումների միջոցով, որոնք պահպանվել են հայոց աշխարհի տարբեր շրջաններում։ Առանձնանում են Մշո, Մոկաց և Սասնա պատումները։ Համահավաքը՝ այսինքն էպոսի տարբեր պատումների հիման վրա կազմված միացյալ տարբերակը, նպատակ ունի ներկայացնելու էպոսի ամբողջական կառուցվածքը՝ առանց տարածաշրջանային տարբերակների բաշխման։ Էպոսի համահավաք տարբերակը հրատարակվել է 1874 թվականին։ Հետագայում համահավաքի կազմման աշխատանքներն իրականացվել են Մանուկ Աբեղյանի ղեկավարությամբ՝ մի խումբ գիտնականների մասնակցությամբ, որոնք համադրել են պատումները և ձևավորել մեկ ամբողջական տեքստ։
+            </p>
+            <p class="trans">
+              The epic was passed down orally through different versions preserved in various regions of historical Armenia. The main known versions are from Mush, Mokk, and Sassoun. The hamahavak (unified version), which combines different versions of the epic into one complete structure, was created to present the full story without separating it by regional variants. The unified version of the epic was published in 1874. Later, the compilation of the hamahavak was led by Manuk Abeghyan with a team of scholars who collected and organized the different versions into one complete text.
+            </p>
+            <p>
+              <em>«Սասնա ծռեր» էպոսի ո՞ր հերոսն ես դու</em> խաղը ստեղծվել է վերոնշյալ համահավաք բնագրի հիման վրա։ 
+            </p>
+            <p class="trans">
+              The quiz <em>Which Daredevils of Sassoun Hero Are You?</em> was created based on this unified version of the epic.
+            </p>
+            <br>
+            <p><b>Տեսանյութներ (Videos)</b></p>
+              <p><a href="https://youtu.be/_VJkXAykIOQ?si=h3_--vQ393w4FIjE">«Սասնա ծռեր» էպոս – համառոտ տեսանյութ</a></p>
+              <p><a href="https://www.youtube.com/watch?v=I-BKvMHILtw&ab_channel=%3A%D4%B2%D5%B8%D6%82%D5%B6TV">«Սասնա ծռեր» էպոսի պատումները – Հայկ Համբարձումյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=GGAP8cKCeD0&ab_channel=ShoghakatTVcompany">Ո՞ր բնագրով կարդալ էպոսը - Հայկ Համբարձումյան և Արքմենիկ Նիկողոսյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=Y1KLupAE94Q&ab_channel=ShoghakatTVcompany">«Սասնա ծռեր» էպոսի հայտնությունը - Հայկ Համբարձումյան և Արքմենիկ Նիկողոսյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=kudxQSW8blM&ab_channel=ShoghakatTVcompany">Էպոսի արդիականությունը - Հայկ Համբարձումյան և Ազատ Եղյազարյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=L51LsAiNU2c&ab_channel=ShoghakatTVcompany">«Սասնա ծռեր» էպոսի նոր համահավաք բնագիրը - Անահիտ Մարգարյանի և Հայկ Համբարձումյանի զրույցը</a></p>
+              <p><a href="https://www.youtube.com/watch?v=w5fqEx3xHzk&ab_channel=evnmag">Հարցուփորձ #1 | Էպոսագետ Հայկ Համբարձումյանը՝ «Սասնա ծռերի» մասին</a></p>
+            <p><b>Ֆիլմեր (Films)</b></p>
+              <p><a href="https://youtu.be/qXnTOE22d4g?si=m2ZID71rvwzXEIPv">«Սասունցի Դավիթ» մուլտֆիլմ</a></p>
+              <p><a href="https://youtu.be/0nxmzC9aoTs?si=MNW6oKt_yQ4kX9gi">«Ճանապարհ դեպի Սասունցի Դավիթ» – ֆիլմ</a></p>
+            <p><b>Հոդվածներ (Articles)</b></p>
+              <p><a href="https://agbu.org/am/node/6483">Armenian Super Heroes - Lusine Minasyan (AGBU)</a></p>
+              <p><a href="https://melinezhamkochyanblog.wordpress.com/2021/11/19/%D5%BD%D5%A1%D5%BD%D5%B6%D5%A1-%D5%AE%D5%BC%D5%A5%D6%80%E2%80%A4-%D5%BE%D5%A5%D6%80%D5%AC%D5%B8%D6%82%D5%AE%D5%B8%D6%82%D5%A9%D5%B5%D5%B8%D6%82%D5%B6/">Սասնա ծռեր․ վերլուծություն - Մխիթար Սեբաստացի կրթահամալիր «Ավագ դպրոց»-ի 12-րդ դասարանի աշակերտուհի Մելինե Ժամկոչյան</a></p>
+              <p><a href="https://www.academia.edu/5669112/%D5%84%D5%AB_%D5%A4%D5%AB%D5%BF%D5%A1%D6%80%D5%AF%D5%B8%D6%82%D5%B4_%D4%BD%D5%A1%D5%B9_%D5%8A%D5%A1%D5%BF%D5%A1%D6%80%D5%A1%D5%A6%D5%AB%D5%AB_%D5%BE%D5%A5%D6%80%D5%A1%D5%A2%D5%A5%D6%80%D5%B5%D5%A1%D5%AC_A_note_on_Xa%C4%8D_Patarazi_">Մի դիտարկում Խաչ Պատարազիի վերաբերյալ (A note on Xač‘ Patarazi) - Հրաչ Մարտիրոսյան</a></p>
+              <p><a href="https://surl.lu/vjoezf">«Վահագնի երգը» և հայկական էպոսը (նոր տեսակետ հայկական էպոսի ծագման և ձևավորման վերաբերյալ)․ The "song of Vahagn" and the Armenian epic (a new view on the origin and formation of the Armenian epic)) - Արմեն Պետրոսյան</a></p>              
+            <p><b>Գրքեր (Books)</b></p>
+              <p><a href="http://publishing.ysu.am/files/Sasna_Tsrer.pdf">Սասնա Ծռեր. պատում, մոտիվ, գրքային ավանդույթ – լիարժեք PDF բնագիր՝ Հայկ Համբարձումյանի խմբագրությամբ, ԵՊՀ հրատարակություն, 2018</a></p>
+              <p><a href="https://www.goodreads.com/book/show/59741253">Ազատ Եղիազարյան. «Սասնա ծռեր» էպոսի պոետիկան, «Անթարես» հրատ., 2013: հայերենից թարգմանեց Ս. Պիտեր Քաուին, Կոստա Մեսա, Կալիֆորնիա, «Մազդա» հրատ., 2008</a></p>
+            <p><b>Աուդիոգրքեր (Audiobooks)</b></p>
+              <p><a href="https://www.youtube.com/watch?v=LIs5gnlWxEk&ab_channel=IrinaMinasyan">Daredevils of Sassoun / Sasuntsi Davit / Armenian heroic epic poem - Իրինա Մինասյան։ Համահավաքի սկզբի մասը, որը ներառում է առաջին ճյուղի մի հատված։</a></p>
+              <p><a href="https://youtube.com/playlist?list=PL9GY4_i2mPxXrfQKevbX-b66FVNm3wsxK&si=moa1Hl1ZWO7VM6nh">«Սասնա ծռեր» (պատում) - Ռադիո Հեքիաթ։ Սա պատում է, համահավաքը չէ։</a></p>
+              <p><a href="https://www.youtube.com/watch?v=LUoLSSfo61c&ab_channel=AlphaNewsArmeniannewsnetwork">«Սասնա Ծռեր» – «Սասունցի Դավիթ»։ Սա միայն մի հատված է։</a></p>
+            <p><b>Նկարներ (Images)</b></p>
+              <p>Նկարները գեներացվել են ChatGPT 4.0 մոդելի կողմից:</p>
+              <p class="trans">Images were generated with the ChatGPT 4.0 model.</p>
+        </div>
+        `,
+        MMher: `
+        <div class="hero-description">
+            <h2 style>Դու Մեծ Մհերն ես</h2>
+            <h3>You are Mher the First</h3>
+            <img src="https://lh3.googleusercontent.com/d/1bSu3c0iHOMHtrVrgcn9P2Lp1GDXPxn03=w300">
+            <p class="ita">
+              Դու վիթխարի ուժով, ամուր սկզբունքներով և անսասան կամքով հերոս ես։ Ինչպես Մեծ Մհերը «Սասնա Ծռեր» էպոսում, դու ոչ միայն ֆիզիկապես ուժեղ ես, այլև ունես խորը սկզբունքներ, որոնց չես դավաճանում: Դու պաշտպանում ես ճշմարտությունը, կանգնում ես թույլերի կողքին: Քո ներկայությունն անմիջապես նկատվում է. մարդիկ կամ հիանում են քեզանով, կամ վախենում։ Դու վստահում ես քո ուժին և գործում ես արագ ու վճռական, բայց երբեմն առանց խորը մտածելու։ Ինչպես Մեծ Մհերը, դու միշտ պատրաստ ես պաշտպանելու քեզնից թույլերին, բայց քո հավատն ուրիշների խոսքի ու սրտի ազնվության հանդեպ երբեմն քեզ դնում է տհաճ իրավիճակների մեջ։ Դու հավատում ես, որ մարդիկ կարող են լավը լինել, անգամ երբ դա վտանգում է քեզ։
+            </p>
+            <p class="ita trans">
+              You are a hero with immense strength, firm principles, and unshakable willpower. Like Mher the First in the Epic of Sassoun, you are not only physically strong but also possess deep rooted values that you never betray. You defend the truth and stand beside the weak. Your presence is immediately felt, people either admire you or fear you. You trust in your strength and act swiftly and decisively, though sometimes without deep contemplation. Like Mher the First, you are always ready to protect those weaker than you, but your faith in the honesty of others’ words and hearts sometimes places you in uncomfortable situations. You believe people can be good, even when that belief puts you at risk.
+            </p>
+            <p>
+              Մեծ Մհերը Սանասարի քաջարի որդին է և «Սասնա Ծռեր» էպոսի երկրորդ ճյուղի գլխավոր հերոսը, որը շարունակում է իր ընտանիքի՝ Սասունը պաշտպանելու ավանդույթը: Նա «Առյուծաձև Մհեր» հզոր մականունը ստացել է՝ մերկ ձեռքերով հսկա առյուծին երկու կես անելուց հետո: Մհերը սպանեց առյուծին, որ բացի հացի ճամփան ժողովրդի համար։
+            </p>
+            <p class="trans">
+              Mher the First is the brave son of Sanasar and the central hero of the second branch of the Daredevils of Sassoun, continuing his family’s tradition of protecting Sassoun. He earned the powerful title "Lion Mher" after tearing a giant lion in half with his bare hands. Mher killed the lion to open the path to bread for his people. 
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+                Ասաց.— Ո՛վ որ էդ առյուծին թրով զարկեց՝<br>
+                Ես կը թողնեմ առյուծն իր տեղ,<br>
+                Ետ կը դառնամ էնոր վերան ու կը սպանեմ զէնի։<br>
+                Դարձավ, ասաց.— Առյուծի մեր<br>
+                Աստված կանչեց՝ ծնավ էնոր.<br>
+                Իմ մե՛րն էլ ինձ, աստված կանչեց, էնպե՛ս ծնավ.<br>
+                Ես իմ ասպապը տի հանեմ,<br>
+                Կուշտի՛ կպնեմ առյուծի հետ։<br>
+                Մհերի հետ գնացած մարդիկ հեռու կանգնան.<br>
+                Մհեր մենակ գնաց։<br>
+                Գնաց, ինք ու առյուծ առան իրար։<br>
+                Մհեր կանչեց.— Հացն ու գինին, տեր կենդանին։<br>
+                Կանչեց, մի ձեռ թալեց էդ առյուծի վերի՛ ծնոտ,<br>
+                Մյուս ձեռ թալեց ներքի՛ ծնոտ,<br>
+                Ճղեց էդ առյուծ մեջտեղեն,<br>
+                Արե՛ց էնոր էրկու կտոր։<br>
+                Մեկ դրեց ճամփու էս դին, մեկէլ՝ էն դին։<br>
+            </p>
+            <p style="text-align: center">***</p>
+            <p>
+              Մեծ Մհերը հաղթում է բռնակալ Մսրա-Մելիքին՝ ազատելով իր ժողովրդին հարկերի պահանջներից։ Հետագայում նա խաբվեց Մսրա-Մելիքի այրի՝ Իսմիլ Խաթունի կողմից, յոթ տարի անցկացնելով նրա հմայության տակ, նախքան տուն վերադառնալը՝ Սասունը կրկին վերակառուցելու և պաշտպանելու համար։ Մեծ Մհերը մարմնավորում է անվախ քաջություն և անսասան նվիրվածություն իր հայրենիքին՝ երբեք չհապաղելով դիմակայել ցանկացած սպառնալիքի։ Չնայած իր գերմարդկային ուժին՝ նա մնում է բարի և անկեղծ կարեկցանք է ցուցաբերում իր պաշտպանած հասարակ ժողովրդի նկատմամբ։ Նրա ազնիվ առատաձեռնությունը շփոթվում է միամտության հետ, ինչը հետագայում նրան խոցելի է դարձնում:
+            </p>
+            <p class="trans">
+              He defeats the tyrant Melik of Misr, freeing his people from oppressive taxes. Later, he is deceived by Melik of Misr’s widow, Ismil Khatun, and spends seven years under her spell before returning home to rebuild and defend Sassoon. Mher the First embodies fearless bravery and unwavering loyalty to his homeland, never hesitating to face any threat. Despite his superhuman strength, he remains kind and shows sincere compassion for the ordinary people he protects. His honest generosity is often mistaken for naivety, which eventually makes him vulnerable.
+            </p>
+            <p>
+              Մհերի առաջնորդ բնավորության գծերը արտահայտվում էին Մսըրա Մելիքի հետ իր հարաբերությունների մեջ։
+            </p>
+            <p class="trans">
+              Mher’s leadership qualities were evident in his relationship with Melik of Misr.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+              Մհեր ընկավ ճամփա,<br>
+              Էկավ, հասավ Սասուն։<br>
+              Տեսավ՝ Ձենով Հովան կանգնած է դուռ։<br>
+              Մհեր բարև տվեց էնոր։<br>
+              Ձենով Հովան բարև առավ, հարցուց.<br>
+              — Մհե՛ր, լաո, ըսկի մեր խարջ պակսեցուցի՞ր:<br>
+              Հովա՛ն, դու ի՞նչ կ’ասես,— ասաց.—<br>
+              Աղե՛կ մարդ է Մըսրա Մելիք.<br>
+              Մեր հարկ բաշխեց ինձի,<br>
+              Ասաց. «Սասնա հողեր թող ձեզ ըլնի»։—<br>
+              Էդտեղ Մհեր ասաց.— Հովա՛ն, հապա գինա՛ս,<br>
+              Մենք Մելքի հետ աղբեր էղանք։<br>
+              Էդ օրեն անցավ ժամանակ մի։<br>
+              Մհեր էնպես կը շախեր Սասուն,<br>
+              Որ մարդ կը վախենար Սասնա մոտենա։<br>
+              Հավք չէ՛ր կարնա իր թևով անցնի էն տեղեն,<br>
+              Օձ չէ՛ր կարնա իր պորտով սողա էն տեղեն։<br>
+              Սասուն շատ առաջացուց Մհեր։<br>
+            </p>
+            <p style="text-align: center">***</p>
+            <p>
+              Երբ Մհերը Խաթունի հմայքից ազատվելուց հետո վերադարձավ Սասուն, փորձում էր հաշտվել Արմաղանի հետ՝ երևան հանելով իր անկեղծ կերպարը։
+            </p>
+            <p class="trans">
+                After freeing himself from Khatun’s enchantment and returning to Sassoon, he tried to reconcile with Armaghan, revealing his sincere character.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+              Մելքի կընիկ ասաց.— Մհե՛ր,<br>
+              Ես կ’ուզեի, որ ինձի տըղա մի ըլներ.<br>
+              Ես կ’ուզեի, որ ժառանգ մի ըլներ Մըսրա.<br>
+              Ես կ’ուզեի, որ չըհանգչեր Մըսրա ճրագ։<br>
+              Ես յոթ տարի զքեզ գինով կը տիրեի.<br>
+              Հիմի կ’էրթաս՝ դու գինաս, չե՛ս էրթա՝ դո՛ւ գինաս։<br>
+              Էս ասելո՛ւ պես՝ Մհերին գինովություն էթող։<br>
+              Որ Մհերին գինովություն էթող՝ Մհեր մտածեց.<br>
+              «Հայ-հո՜յ, էս մե՛կ օր չեմ ես էսատեղ,<br>
+              «Ես ինչպե՞ս տի Արմաղանին ու Հովանին պատասխան տաս՛։<br>
+              «Տեսա՞ր, իմ կընկա խո՛սք էլավ։<br>
+              «Իմ կընիկ ասաց մ’էրթա։<br>
+              «Ես էնոր խոսք չը լսեցի»։<br>
+              Էդտեղ Մհեր բախտակոծվավ, ասաց.<br>
+              «Թող իմ աչքեր քոռանար,<br>
+              «Որ ես էկա, էս յոթ տարի<br>
+              «Խալխի արտ ջրի՝ կանաչ պահեցի,<br>
+              «Իմ արտ չորցավ։ Վայ, էս ի՞նչ արի։<br>
+              «Հայու ճրագ հանգուցի, Մըսրա ճրագ վառի»։<br>
+              Էլավ սուս-փուս, ու դուրս էլավ Մըսրա,<br>
+              Քոռ ու փոշման դարձավ իր տուն—Սասուն։<br>
+            </p>
+            <hr>
+            <h2>Իմանալ ավելին</h2>
+            <h3>Learn more</h3>
+            <p>
+              «Սասնա ծռեր» էպոսը արտացոլում է հայ ժողովրդի հերոսական ոգին և անդադար պայքարը՝ հանուն հայրենիքի պաշտպանության և ազգային ինքնության պահպանման։ Ստեղծվել է 8–9-րդ դարերին։ Էպոսի հերոսները միայն թշնամիներին հակազդող մարտիկներ չէին, այլ նաև նվիրված էին իրենց ժողովրդին՝ օգնելով առօրյա կյանքում առաջացած խնդիրների և գործերի լուծման մեջ։ Թեև նրանք օժտված էին գերբնական ուժերով, նրանց կերպարները պատմության էջերում առանձնանում են իրենց մարդասիրությամբ, անկեղծությամբ և երբեմն էլ միամտությամբ։
+            </p>
+            <p class="trans">
+              The Daredevils of Sassoun epic reflects the heroic spirit of the Armenian people and their ongoing struggle to defend their homeland and preserve their national identity. It was created during the 8th–9th centuries. The heroes of the epic were not only warriors who fought against enemies, but were also devoted to their people, always prepared to lend a helping hand. Even though they had supernatural strength, they stood out in history for their kindness, honesty, and even occasionally their naivety.
+            </p>
+            <p>
+              Էպոսը կազմված է չորս ճյուղեից,  որոնցից յուրաքանչյուրը կոչվել է տվյալ ճյուղի  գլխավոր հերոսի անունով՝ «Սանասար և Բաղդասար», «Մեծ Մհեր», «Սասունցի Դավիթ» և «Փոքր Մհեր»։ Այս չորս ճյուղերը ներկայացնում են չորս սերունդներ, որոնք իրար հետ կապված են ազգակցական կապերով։ «Սասնա ծռեր» էպոսը ծագել է հայկական լեռնաշխարհի հին քաղաքներից մեկում՝ Սասունում, որտեղից էլ ստացել է իր անունը։ Սասունցիները հայտնի էին իրենց հայրենասիրությամբ, հողի նկատմամբ առանձնահատուկ սիրով, ինչպես նաև որոշ չափով յուրահատուկ՝ «ծուռ» բնավորությամբ, որն էլ հաճախ երևում է էպոսի հերոսների վարքագծում։
+            </p>
+            <p class="trans">
+              The epic is made up of four branches, each named after the main hero of that section: Sanasar and Baghdasar, Great Mher (the First) , David of Sassoun, and Little Mher (the Second). These four branches represent the stories of members from four generations of a family. The epic originated in one of the ancient towns of the Armenian Highlands, Sassoun, which is also where it gets its name. The people of Sassoun were known for their love and respect for their homeland and uniquely “stubborn” character, which is also seen in the behavior of the epic’s heroes.
+            </p>
+            <p>
+              Էպոսը փոխանցվել է բանավոր ձևով՝ տարբեր պատումների միջոցով, որոնք պահպանվել են հայոց աշխարհի տարբեր շրջաններում։ Առանձնանում են Մշո, Մոկաց և Սասնա պատումները։ Համահավաքը՝ այսինքն էպոսի տարբեր պատումների հիման վրա կազմված միացյալ տարբերակը, նպատակ ունի ներկայացնելու էպոսի ամբողջական կառուցվածքը՝ առանց տարածաշրջանային տարբերակների բաշխման։ Էպոսի համահավաք տարբերակը հրատարակվել է 1874 թվականին։ Հետագայում համահավաքի կազմման աշխատանքներն իրականացվել են Մանուկ Աբեղյանի ղեկավարությամբ՝ մի խումբ գիտնականների մասնակցությամբ, որոնք համադրել են պատումները և ձևավորել մեկ ամբողջական տեքստ։
+            </p>
+            <p class="trans">
+              The epic was passed down orally through different versions preserved in various regions of historical Armenia. The main known versions are from Mush, Mokk, and Sassoun. The hamahavak (unified version), which combines different versions of the epic into one complete structure, was created to present the full story without separating it by regional variants. The unified version of the epic was published in 1874. Later, the compilation of the hamahavak was led by Manuk Abeghyan with a team of scholars who collected and organized the different versions into one complete text.
+            </p>
+            <p>
+              <em>«Սասնա ծռեր» էպոսի ո՞ր հերոսն ես դու</em> խաղը ստեղծվել է վերոնշյալ համահավաք բնագրի հիման վրա։ 
+            </p>
+            <p class="trans">
+              The quiz <em>Which Daredevils of Sassoun Hero Are You?</em> was created based on this unified version of the epic.
+            </p>
+            <br>
+            <p><b>Տեսանյութներ (Videos)</b></p>
+              <p><a href="https://youtu.be/_VJkXAykIOQ?si=h3_--vQ393w4FIjE">«Սասնա ծռեր» էպոս – համառոտ տեսանյութ</a></p>
+              <p><a href="https://www.youtube.com/watch?v=I-BKvMHILtw&ab_channel=%3A%D4%B2%D5%B8%D6%82%D5%B6TV">«Սասնա ծռեր» էպոսի պատումները – Հայկ Համբարձումյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=GGAP8cKCeD0&ab_channel=ShoghakatTVcompany">Ո՞ր բնագրով կարդալ էպոսը - Հայկ Համբարձումյան և Արքմենիկ Նիկողոսյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=Y1KLupAE94Q&ab_channel=ShoghakatTVcompany">«Սասնա ծռեր» էպոսի հայտնությունը - Հայկ Համբարձումյան և Արքմենիկ Նիկողոսյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=kudxQSW8blM&ab_channel=ShoghakatTVcompany">Էպոսի արդիականությունը - Հայկ Համբարձումյան և Ազատ Եղյազարյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=L51LsAiNU2c&ab_channel=ShoghakatTVcompany">«Սասնա ծռեր» էպոսի նոր համահավաք բնագիրը - Անահիտ Մարգարյանի և Հայկ Համբարձումյանի զրույցը</a></p>
+              <p><a href="https://www.youtube.com/watch?v=w5fqEx3xHzk&ab_channel=evnmag">Հարցուփորձ #1 | Էպոսագետ Հայկ Համբարձումյանը՝ «Սասնա ծռերի» մասին</a></p>
+            <p><b>Ֆիլմեր (Films)</b></p>
+              <p><a href="https://youtu.be/qXnTOE22d4g?si=m2ZID71rvwzXEIPv">«Սասունցի Դավիթ» մուլտֆիլմ</a></p>
+              <p><a href="https://youtu.be/0nxmzC9aoTs?si=MNW6oKt_yQ4kX9gi">«Ճանապարհ դեպի Սասունցի Դավիթ» – ֆիլմ</a></p>
+            <p><b>Հոդվածներ (Articles)</b></p>
+              <p><a href="https://agbu.org/am/node/6483">Armenian Super Heroes - Lusine Minasyan (AGBU)</a></p>
+              <p><a href="https://melinezhamkochyanblog.wordpress.com/2021/11/19/%D5%BD%D5%A1%D5%BD%D5%B6%D5%A1-%D5%AE%D5%BC%D5%A5%D6%80%E2%80%A4-%D5%BE%D5%A5%D6%80%D5%AC%D5%B8%D6%82%D5%AE%D5%B8%D6%82%D5%A9%D5%B5%D5%B8%D6%82%D5%B6/">Սասնա ծռեր․ վերլուծություն - Մխիթար Սեբաստացի կրթահամալիր «Ավագ դպրոց»-ի 12-րդ դասարանի աշակերտուհի Մելինե Ժամկոչյան</a></p>
+              <p><a href="https://www.academia.edu/5669112/%D5%84%D5%AB_%D5%A4%D5%AB%D5%BF%D5%A1%D6%80%D5%AF%D5%B8%D6%82%D5%B4_%D4%BD%D5%A1%D5%B9_%D5%8A%D5%A1%D5%BF%D5%A1%D6%80%D5%A1%D5%A6%D5%AB%D5%AB_%D5%BE%D5%A5%D6%80%D5%A1%D5%A2%D5%A5%D6%80%D5%B5%D5%A1%D5%AC_A_note_on_Xa%C4%8D_Patarazi_">Մի դիտարկում Խաչ Պատարազիի վերաբերյալ (A note on Xač‘ Patarazi) - Հրաչ Մարտիրոսյան</a></p>
+              <p><a href="https://surl.lu/vjoezf">«Վահագնի երգը» և հայկական էպոսը (նոր տեսակետ հայկական էպոսի ծագման և ձևավորման վերաբերյալ)․ The "song of Vahagn" and the Armenian epic (a new view on the origin and formation of the Armenian epic)) - Արմեն Պետրոսյան</a></p>              
+            <p><b>Գրքեր (Books)</b></p>
+              <p><a href="http://publishing.ysu.am/files/Sasna_Tsrer.pdf">Սասնա Ծռեր. պատում, մոտիվ, գրքային ավանդույթ – լիարժեք PDF բնագիր՝ Հայկ Համբարձումյանի խմբագրությամբ, ԵՊՀ հրատարակություն, 2018</a></p>
+              <p><a href="https://www.goodreads.com/book/show/59741253">Ազատ Եղիազարյան. «Սասնա ծռեր» էպոսի պոետիկան, «Անթարես» հրատ., 2013: հայերենից թարգմանեց Ս. Պիտեր Քաուին, Կոստա Մեսա, Կալիֆորնիա, «Մազդա» հրատ., 2008</a></p>
+            <p><b>Աուդիոգրքեր (Audiobooks)</b></p>
+              <p><a href="https://www.youtube.com/watch?v=LIs5gnlWxEk&ab_channel=IrinaMinasyan">Daredevils of Sassoun / Sasuntsi Davit / Armenian heroic epic poem - Իրինա Մինասյան։ Համահավաքի սկզբի մասը, որը ներառում է առաջին ճյուղի մի հատված։</a></p>
+              <p><a href="https://youtube.com/playlist?list=PL9GY4_i2mPxXrfQKevbX-b66FVNm3wsxK&si=moa1Hl1ZWO7VM6nh">«Սասնա ծռեր» (պատում) - Ռադիո Հեքիաթ։ Սա պատում է, համահավաքը չէ։</a></p>
+              <p><a href="https://www.youtube.com/watch?v=LUoLSSfo61c&ab_channel=AlphaNewsArmeniannewsnetwork">«Սասնա Ծռեր» – «Սասունցի Դավիթ»։ Սա միայն մի հատված է։</a></p>
+            <p><b>Նկարներ (Images)</b></p>
+              <p>Նկարները գեներացվել են ChatGPT 4.0 մոդելի կողմից:</p>
+              <p class="trans">Images were generated with the ChatGPT 4.0 model.</p>
+        </div>
+        `,
+        PMher: `
+        <div class="hero-description">
+            <h2 style>Դու Փոքր Մհերն ես</h2>
+            <h3>You are Mher the Second</h3>
+            <img src="https://lh3.googleusercontent.com/d/1kC8H2WTrL32-G6NTg7fURyoUk-8hEjsb=w300">
+            <p class="ita">
+                Մարդիկ հաճախ քեզ մեղադրում են սառը և ինքնանփոփ լինելու մեջ, առանց գիտակցելու, որ դա  պարզապես քո ինքնապաշտպանական  մեխանիզմն է՝ կյանքում քեզ հասցվող  ցավերի և փորձությունների դեմ: Քո սիրո լեզուն նույնպես լուռ է, բայց խորապես անմոռանալի սիրելիներիդ համար: Երբ սիրում ես, ապա անվերապահորեն՝ առանց պայմանների և պահանջերի։ Դու պատրաստ ես ամեն բան անելու սիրելիներիդ բարօրության համար:
+            </p>
+            <p class="ita trans">
+                People often accuse you of being cold and reserved, without realizing that is simply your self-defense against the pains and trials in your life. Your love language is silence, but without ever forgetting about your loved ones. When you love, you love unconditionally without contingencies or demands. You are prepared to do anything for the well-being of your loved ones.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+                Գոհար բերեց, թուր էդիր մեջտեղ, ասաց. <br>
+                Արևմտից թագավոր մեր մոտեն խարջ կ’առնի <br>
+                Ասաց,— Էն խարջ որ կտրեցիր, <br>
+                Ես քեզի կնիկ, դու ինձի մարդ։ <br>
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="ita">
+                Չնայած նրան, որ դու անցնում ես շատ բարդությունների միջով և հաճախ միայնակ ու գերծանրաբեռնված ես քեզ զգում, պարզապես պետք է շարունակես հավատալ ինքդ քեզ և հիշել քո ներքին ուժի մասին, ինքդ քո մեջ պարփակվելու և  աշխարհից մեկուսանալու փոխարեն:  
+            </p>
+            <p class="ita trans">
+                Even though you go through a lot of hardships and often feel lonely and overworked, you must simply keep believing in yourself and remember that you are mentally strong, instead of shutting yourself away and isolating yourself from the world.
+            </p>
+            <p>
+                Փոքր Մհերը Սասունցի Դավթի և Խանդութ Խանդումի որդին է և սերնդի վերջին ներկայացուցիչը։ Նրան է նվիրված «Սասնա Ծռեր» էպոսի վերջին (չորրորդ) ճյուղը։ Մհերը ամուսնանում է Գոհարի հետ, բայց այդպես էլ անժառանգ է մնում հոր անեցքի պատճառով։  Նրա կյանքը անցնում է շատ միայնակ և տխուր։ Ըստ ավադնության՝ նա փակվում է Ագռավաքար ժայռի մեջ և հազվադեպ է դուրս  գալիս։ 
+            </p>
+            <p class="trans">
+                Mher the Second is the son of Davit of Sassoun and Khandout Khandum and is the last representation of the generations. The fourth and final branch is dedicated to him. Mher the Younger is married to Gohar, but remains heirless due to his father’s actions. His life passes in a very sad and lonely manner; according to tradition, he locks himself in Agravakar rock and rarely comes out.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+              — Քո հեր սպանած, քո մերն էլ մեռե.<br>
+              Չմշկիկ Սուլթան գահ է գա,<br>
+              Սասնա հող-քար ողողի, տանի։<br>
+              Էլաց ու վեր քիթ ու բերնին ընկավ գետին:<br>
+              Մհեր որ ընկավ գետին,<br>
+              Քեռին ու հրողբեր թափան վերան՝<br>
+              Ինչ արեցին, չը կարցան շիտկել։<br>
+              Մհերի արտսունք գետին արեց խանդակ, գնաց։<br>
+            </p>
+            <hr>
+            <h2>Իմանալ ավելին</h2>
+            <h3>Learn more</h3>
+            <p>
+              «Սասնա ծռեր» էպոսը արտացոլում է հայ ժողովրդի հերոսական ոգին և անդադար պայքարը՝ հանուն հայրենիքի պաշտպանության և ազգային ինքնության պահպանման։ Ստեղծվել է 8–9-րդ դարերին։ Էպոսի հերոսները միայն թշնամիներին հակազդող մարտիկներ չէին, այլ նաև նվիրված էին իրենց ժողովրդին՝ օգնելով առօրյա կյանքում առաջացած խնդիրների և գործերի լուծման մեջ։ Թեև նրանք օժտված էին գերբնական ուժերով, նրանց կերպարները պատմության էջերում առանձնանում են իրենց մարդասիրությամբ, անկեղծությամբ և երբեմն էլ միամտությամբ։
+            </p>
+            <p class="trans">
+              The Daredevils of Sassoun epic reflects the heroic spirit of the Armenian people and their ongoing struggle to defend their homeland and preserve their national identity. It was created during the 8th–9th centuries. The heroes of the epic were not only warriors who fought against enemies, but were also devoted to their people, always prepared to lend a helping hand. Even though they had supernatural strength, they stood out in history for their kindness, honesty, and even occasionally their naivety.
+            </p>
+            <p>
+              Էպոսը կազմված է չորս ճյուղեից,  որոնցից յուրաքանչյուրը կոչվել է տվյալ ճյուղի  գլխավոր հերոսի անունով՝ «Սանասար և Բաղդասար», «Մեծ Մհեր», «Սասունցի Դավիթ» և «Փոքր Մհեր»։ Այս չորս ճյուղերը ներկայացնում են չորս սերունդներ, որոնք իրար հետ կապված են ազգակցական կապերով։ «Սասնա ծռեր» էպոսը ծագել է հայկական լեռնաշխարհի հին քաղաքներից մեկում՝ Սասունում, որտեղից էլ ստացել է իր անունը։ Սասունցիները հայտնի էին իրենց հայրենասիրությամբ, հողի նկատմամբ առանձնահատուկ սիրով, ինչպես նաև որոշ չափով յուրահատուկ՝ «ծուռ» բնավորությամբ, որն էլ հաճախ երևում է էպոսի հերոսների վարքագծում։
+            </p>
+            <p class="trans">
+              The epic is made up of four branches, each named after the main hero of that section: Sanasar and Baghdasar, Great Mher (the First) , David of Sassoun, and Little Mher (the Second). These four branches represent the stories of members from four generations of a family. The epic originated in one of the ancient towns of the Armenian Highlands, Sassoun, which is also where it gets its name. The people of Sassoun were known for their love and respect for their homeland and uniquely “stubborn” character, which is also seen in the behavior of the epic’s heroes.
+            </p>
+            <p>
+              Էպոսը փոխանցվել է բանավոր ձևով՝ տարբեր պատումների միջոցով, որոնք պահպանվել են հայոց աշխարհի տարբեր շրջաններում։ Առանձնանում են Մշո, Մոկաց և Սասնա պատումները։ Համահավաքը՝ այսինքն էպոսի տարբեր պատումների հիման վրա կազմված միացյալ տարբերակը, նպատակ ունի ներկայացնելու էպոսի ամբողջական կառուցվածքը՝ առանց տարածաշրջանային տարբերակների բաշխման։ Էպոսի համահավաք տարբերակը հրատարակվել է 1874 թվականին։ Հետագայում համահավաքի կազմման աշխատանքներն իրականացվել են Մանուկ Աբեղյանի ղեկավարությամբ՝ մի խումբ գիտնականների մասնակցությամբ, որոնք համադրել են պատումները և ձևավորել մեկ ամբողջական տեքստ։
+            </p>
+            <p class="trans">
+              The epic was passed down orally through different versions preserved in various regions of historical Armenia. The main known versions are from Mush, Mokk, and Sassoun. The hamahavak (unified version), which combines different versions of the epic into one complete structure, was created to present the full story without separating it by regional variants. The unified version of the epic was published in 1874. Later, the compilation of the hamahavak was led by Manuk Abeghyan with a team of scholars who collected and organized the different versions into one complete text.
+            </p>
+            <p>
+              <em>«Սասնա ծռեր» էպոսի ո՞ր հերոսն ես դու</em> խաղը ստեղծվել է վերոնշյալ համահավաք բնագրի հիման վրա։ 
+            </p>
+            <p class="trans">
+              The quiz <em>Which Daredevils of Sassoun Hero Are You?</em> was created based on this unified version of the epic.
+            </p>
+            <br>
+            <p><b>Տեսանյութներ (Videos)</b></p>
+              <p><a href="https://youtu.be/_VJkXAykIOQ?si=h3_--vQ393w4FIjE">«Սասնա ծռեր» էպոս – համառոտ տեսանյութ</a></p>
+              <p><a href="https://www.youtube.com/watch?v=I-BKvMHILtw&ab_channel=%3A%D4%B2%D5%B8%D6%82%D5%B6TV">«Սասնա ծռեր» էպոսի պատումները – Հայկ Համբարձումյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=GGAP8cKCeD0&ab_channel=ShoghakatTVcompany">Ո՞ր բնագրով կարդալ էպոսը - Հայկ Համբարձումյան և Արքմենիկ Նիկողոսյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=Y1KLupAE94Q&ab_channel=ShoghakatTVcompany">«Սասնա ծռեր» էպոսի հայտնությունը - Հայկ Համբարձումյան և Արքմենիկ Նիկողոսյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=kudxQSW8blM&ab_channel=ShoghakatTVcompany">Էպոսի արդիականությունը - Հայկ Համբարձումյան և Ազատ Եղյազարյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=L51LsAiNU2c&ab_channel=ShoghakatTVcompany">«Սասնա ծռեր» էպոսի նոր համահավաք բնագիրը - Անահիտ Մարգարյանի և Հայկ Համբարձումյանի զրույցը</a></p>
+              <p><a href="https://www.youtube.com/watch?v=w5fqEx3xHzk&ab_channel=evnmag">Հարցուփորձ #1 | Էպոսագետ Հայկ Համբարձումյանը՝ «Սասնա ծռերի» մասին</a></p>
+            <p><b>Ֆիլմեր (Films)</b></p>
+              <p><a href="https://youtu.be/qXnTOE22d4g?si=m2ZID71rvwzXEIPv">«Սասունցի Դավիթ» մուլտֆիլմ</a></p>
+              <p><a href="https://youtu.be/0nxmzC9aoTs?si=MNW6oKt_yQ4kX9gi">«Ճանապարհ դեպի Սասունցի Դավիթ» – ֆիլմ</a></p>
+            <p><b>Հոդվածներ (Articles)</b></p>
+              <p><a href="https://agbu.org/am/node/6483">Armenian Super Heroes - Lusine Minasyan (AGBU)</a></p>
+              <p><a href="https://melinezhamkochyanblog.wordpress.com/2021/11/19/%D5%BD%D5%A1%D5%BD%D5%B6%D5%A1-%D5%AE%D5%BC%D5%A5%D6%80%E2%80%A4-%D5%BE%D5%A5%D6%80%D5%AC%D5%B8%D6%82%D5%AE%D5%B8%D6%82%D5%A9%D5%B5%D5%B8%D6%82%D5%B6/">Սասնա ծռեր․ վերլուծություն - Մխիթար Սեբաստացի կրթահամալիր «Ավագ դպրոց»-ի 12-րդ դասարանի աշակերտուհի Մելինե Ժամկոչյան</a></p>
+              <p><a href="https://www.academia.edu/5669112/%D5%84%D5%AB_%D5%A4%D5%AB%D5%BF%D5%A1%D6%80%D5%AF%D5%B8%D6%82%D5%B4_%D4%BD%D5%A1%D5%B9_%D5%8A%D5%A1%D5%BF%D5%A1%D6%80%D5%A1%D5%A6%D5%AB%D5%AB_%D5%BE%D5%A5%D6%80%D5%A1%D5%A2%D5%A5%D6%80%D5%B5%D5%A1%D5%AC_A_note_on_Xa%C4%8D_Patarazi_">Մի դիտարկում Խաչ Պատարազիի վերաբերյալ (A note on Xač‘ Patarazi) - Հրաչ Մարտիրոսյան</a></p>
+              <p><a href="https://surl.lu/vjoezf">«Վահագնի երգը» և հայկական էպոսը (նոր տեսակետ հայկական էպոսի ծագման և ձևավորման վերաբերյալ)․ The "song of Vahagn" and the Armenian epic (a new view on the origin and formation of the Armenian epic)) - Արմեն Պետրոսյան</a></p>              
+            <p><b>Գրքեր (Books)</b></p>
+              <p><a href="http://publishing.ysu.am/files/Sasna_Tsrer.pdf">Սասնա Ծռեր. պատում, մոտիվ, գրքային ավանդույթ – լիարժեք PDF բնագիր՝ Հայկ Համբարձումյանի խմբագրությամբ, ԵՊՀ հրատարակություն, 2018</a></p>
+              <p><a href="https://www.goodreads.com/book/show/59741253">Ազատ Եղիազարյան. «Սասնա ծռեր» էպոսի պոետիկան, «Անթարես» հրատ., 2013: հայերենից թարգմանեց Ս. Պիտեր Քաուին, Կոստա Մեսա, Կալիֆորնիա, «Մազդա» հրատ., 2008</a></p>
+            <p><b>Աուդիոգրքեր (Audiobooks)</b></p>
+              <p><a href="https://www.youtube.com/watch?v=LIs5gnlWxEk&ab_channel=IrinaMinasyan">Daredevils of Sassoun / Sasuntsi Davit / Armenian heroic epic poem - Իրինա Մինասյան։ Համահավաքի սկզբի մասը, որը ներառում է առաջին ճյուղի մի հատված։</a></p>
+              <p><a href="https://youtube.com/playlist?list=PL9GY4_i2mPxXrfQKevbX-b66FVNm3wsxK&si=moa1Hl1ZWO7VM6nh">«Սասնա ծռեր» (պատում) - Ռադիո Հեքիաթ։ Սա պատում է, համահավաքը չէ։</a></p>
+              <p><a href="https://www.youtube.com/watch?v=LUoLSSfo61c&ab_channel=AlphaNewsArmeniannewsnetwork">«Սասնա Ծռեր» – «Սասունցի Դավիթ»։ Սա միայն մի հատված է։</a></p>
+            <p><b>Նկարներ (Images)</b></p>
+              <p>Նկարները գեներացվել են ChatGPT 4.0 մոդելի կողմից:</p>
+              <p class="trans">Images were generated with the ChatGPT 4.0 model.</p>
+        </div>        `,
+        Davit: `
+        <div class="hero-description">
+            <h2 style>Դու Սասունցի Դավիթն ես</h2>
+            <h3>You are David of Sassoun</h3>
+            <img src="https://lh3.googleusercontent.com/d/1ZamlSpnmSDzivGCM8aOVBhMmc1Vwq8Qv=w300">
+            <p class="ita">
+              Դու օժտված ես գերբնական ուժով և անպարտելի ես: Քեզ շատերը չեն սիրում, որովհետև իրենցից լավն ես և ուժեղ: Դու  շատ արդարամիտ ես, մարդասեր բայց միևնույն ժամանակ նաև պարզամիտ: 
+            </p>
+            <p class="ita trans">
+              You are endowed with supernatural powers and are invincible. Many don't like you because you are better and stronger than them. You are very just, humane, but at the same time, also straightforward.
+            </p>
+            <p>
+              Դավիթը «Սասնա Ծռեր» էպոսի երրորդ ճյուղի գլխավոր հերոսն է: Նա Մեծ Մհերի որդին է։ Դավիթը ունեցել է շատ դժվար մանկություն, քանի որ մեծացել է առանց ծնողների: Մեծացել է թշնամի երկրում և նրան խնամել է Մսրա Մելիքի մայրը՝ Իսմիլ Խաթունը։ Տարիներ անց վերադարձել է Սասուն և պաշտպանել այն Մսրա Մելիքից:
+            </p>
+            <p class="trans">
+              David is the main hero of the third branch of the "Daredevils of Sassoun" epic. He is the son of  Mher the First. David had a very difficult childhood, as he grew up without parents. He grew up in an enemy land and was cared for by Melik's mother, Ismil Khatun. Years later, he returned to Sassoun and defended it from Melik of Misr.
+            </p>
+            <p>
+              Վաղ տարիքում գումար վաստակելու համար արել է ամեն բան, նույնիսկ գառներին տանում էր Սասնա սարեր արածացնելու:            </p>
+            <p class="trans">
+                In his early years, to earn money, he did everything, even taking sheep to graze in the mountains of Sassoun.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+                <strong>Ասաց.— Դա՛վիթ, քեզի բռներ են գառնարած։</strong><br>
+                Ամեն մեկ տավարի գլուխ մեկ կոտ կորեկ,<br>
+                Մեկ կոտ ցորեն մեզ վարձ կը տան։<br>
+                Կարնա՞ս պահի գառներ, թե՞ չես կարնա։<br>
+                <strong>Ասաց.— էնենց պահեմ, ծաղկըներու պես։</strong><br>
+            </p>
+            <p style="text-align: center">***</p>
+            <p>
+                Սասունցի Դավիթը անպարտելի է և էլ ավելի հզորացավ, երբ ջուր խմեց իր հոր Կաթնաղբյուրից: Նրա անպարտելիության և զորեղության փաստը զայրացնում էր Մսրա Մելիքին, որի պատճառով էլ նա չէր սիրում Դավթին: Դավիթը մեծացել է՝  ուտելով հայկական մեղր ու կարագ: Նրա սիրելի ուտեստներից են հարիսան, ղավուրման, գառան մսով ու բրնձով փլավը, շաղգամը:
+            </p>
+            <p class="trans">
+                David of Sassoun is invincible and became even more powerful when he drank water from his father's Katnaghbyur. His invincibility and strength annoyed Melik of Misr, which is why he didn't like David. David grew up eating Armenian honey and butter. His favorite dishes include harissa, khashlama, pilaf with lamb meat and rice, and turnip.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+              Դավիթ ասաց.— Նա՛նե, նա՛նե,<br>
+              <strong>Ինձի քիչ մի հարիսա տուր,</strong><br>
+              Յոթ գեղի նախրորդ ժողովվեր ենք մեկտեղ,—<br>
+              Դե՜հ, գեղի աղքատ որ կա.<br>
+              Գեղի նախրո՛րդն է, հոտա՛ղն է,—<br>
+              <strong>Քո հո՛ր խերին՝ մեզի հարիսա՛ տուր —</strong><br>
+              Տանենք, ուտենք<br>
+            </p>
+            <p style="text-align: center">***</p>
+            <p>
+              Նա շատ ազնիվ ու պարզամիտ մարդ  է։ Դավթի պարզամտությունը երևաց այն ժամանակ, երբ նա հավատաց Մելիքին և ընկավ հորի մեջ։
+            </p>
+            <p class="trans">
+              He is a very honest and simple-minded man. David's simplicity was evident when he trusted Melik and fell into a pit.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+                Խաբեցին Դավթին՝ ձիուց բերին տակ։<br>
+                Ձին ըռըկավ, փախա՜վ, գընա՜ց,<br>
+                Գընաց՝ էլավ սարի գլուխ։<br>
+                <strong>Տարան Դավթին, նստեցուցին վե՛ր էն հորին։<br>
+                Դըրըմբ... ընկավ հոր վե՛, գընաց։</strong><br>
+            </p>
+            <hr>
+            <h2>Իմանալ ավելին</h2>
+            <h3>Learn more</h3>
+            <p>
+              «Սասնա ծռեր» էպոսը արտացոլում է հայ ժողովրդի հերոսական ոգին և անդադար պայքարը՝ հանուն հայրենիքի պաշտպանության և ազգային ինքնության պահպանման։ Ստեղծվել է 8–9-րդ դարերին։ Էպոսի հերոսները միայն թշնամիներին հակազդող մարտիկներ չէին, այլ նաև նվիրված էին իրենց ժողովրդին՝ օգնելով առօրյա կյանքում առաջացած խնդիրների և գործերի լուծման մեջ։ Թեև նրանք օժտված էին գերբնական ուժերով, նրանց կերպարները պատմության էջերում առանձնանում են իրենց մարդասիրությամբ, անկեղծությամբ և երբեմն էլ միամտությամբ։
+            </p>
+            <p class="trans">
+              The Daredevils of Sassoun epic reflects the heroic spirit of the Armenian people and their ongoing struggle to defend their homeland and preserve their national identity. It was created during the 8th–9th centuries. The heroes of the epic were not only warriors who fought against enemies, but were also devoted to their people, always prepared to lend a helping hand. Even though they had supernatural strength, they stood out in history for their kindness, honesty, and even occasionally their naivety.
+            </p>
+            <p>
+              Էպոսը կազմված է չորս ճյուղեից,  որոնցից յուրաքանչյուրը կոչվել է տվյալ ճյուղի  գլխավոր հերոսի անունով՝ «Սանասար և Բաղդասար», «Մեծ Մհեր», «Սասունցի Դավիթ» և «Փոքր Մհեր»։ Այս չորս ճյուղերը ներկայացնում են չորս սերունդներ, որոնք իրար հետ կապված են ազգակցական կապերով։ «Սասնա ծռեր» էպոսը ծագել է հայկական լեռնաշխարհի հին քաղաքներից մեկում՝ Սասունում, որտեղից էլ ստացել է իր անունը։ Սասունցիները հայտնի էին իրենց հայրենասիրությամբ, հողի նկատմամբ առանձնահատուկ սիրով, ինչպես նաև որոշ չափով յուրահատուկ՝ «ծուռ» բնավորությամբ, որն էլ հաճախ երևում է էպոսի հերոսների վարքագծում։
+            </p>
+            <p class="trans">
+              The epic is made up of four branches, each named after the main hero of that section: Sanasar and Baghdasar, Great Mher (the First) , David of Sassoun, and Little Mher (the Second). These four branches represent the stories of members from four generations of a family. The epic originated in one of the ancient towns of the Armenian Highlands, Sassoun, which is also where it gets its name. The people of Sassoun were known for their love and respect for their homeland and uniquely “stubborn” character, which is also seen in the behavior of the epic’s heroes.
+            </p>
+            <p>
+              Էպոսը փոխանցվել է բանավոր ձևով՝ տարբեր պատումների միջոցով, որոնք պահպանվել են հայոց աշխարհի տարբեր շրջաններում։ Առանձնանում են Մշո, Մոկաց և Սասնա պատումները։ Համահավաքը՝ այսինքն էպոսի տարբեր պատումների հիման վրա կազմված միացյալ տարբերակը, նպատակ ունի ներկայացնելու էպոսի ամբողջական կառուցվածքը՝ առանց տարածաշրջանային տարբերակների բաշխման։ Էպոսի համահավաք տարբերակը հրատարակվել է 1874 թվականին։ Հետագայում համահավաքի կազմման աշխատանքներն իրականացվել են Մանուկ Աբեղյանի ղեկավարությամբ՝ մի խումբ գիտնականների մասնակցությամբ, որոնք համադրել են պատումները և ձևավորել մեկ ամբողջական տեքստ։
+            </p>
+            <p class="trans">
+              The epic was passed down orally through different versions preserved in various regions of historical Armenia. The main known versions are from Mush, Mokk, and Sassoun. The hamahavak (unified version), which combines different versions of the epic into one complete structure, was created to present the full story without separating it by regional variants. The unified version of the epic was published in 1874. Later, the compilation of the hamahavak was led by Manuk Abeghyan with a team of scholars who collected and organized the different versions into one complete text.
+            </p>
+            <p>
+              <em>«Սասնա ծռեր» էպոսի ո՞ր հերոսն ես դու</em> խաղը ստեղծվել է վերոնշյալ համահավաք բնագրի հիման վրա։ 
+            </p>
+            <p class="trans">
+              The quiz <em>Which Daredevils of Sassoun Hero Are You?</em> was created based on this unified version of the epic.
+            </p>
+            <br>
+            <p><b>Տեսանյութներ (Videos)</b></p>
+              <p><a href="https://youtu.be/_VJkXAykIOQ?si=h3_--vQ393w4FIjE">«Սասնա ծռեր» էպոս – համառոտ տեսանյութ</a></p>
+              <p><a href="https://www.youtube.com/watch?v=I-BKvMHILtw&ab_channel=%3A%D4%B2%D5%B8%D6%82%D5%B6TV">«Սասնա ծռեր» էպոսի պատումները – Հայկ Համբարձումյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=GGAP8cKCeD0&ab_channel=ShoghakatTVcompany">Ո՞ր բնագրով կարդալ էպոսը - Հայկ Համբարձումյան և Արքմենիկ Նիկողոսյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=Y1KLupAE94Q&ab_channel=ShoghakatTVcompany">«Սասնա ծռեր» էպոսի հայտնությունը - Հայկ Համբարձումյան և Արքմենիկ Նիկողոսյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=kudxQSW8blM&ab_channel=ShoghakatTVcompany">Էպոսի արդիականությունը - Հայկ Համբարձումյան և Ազատ Եղյազարյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=L51LsAiNU2c&ab_channel=ShoghakatTVcompany">«Սասնա ծռեր» էպոսի նոր համահավաք բնագիրը - Անահիտ Մարգարյանի և Հայկ Համբարձումյանի զրույցը</a></p>
+              <p><a href="https://www.youtube.com/watch?v=w5fqEx3xHzk&ab_channel=evnmag">Հարցուփորձ #1 | Էպոսագետ Հայկ Համբարձումյանը՝ «Սասնա ծռերի» մասին</a></p>
+            <p><b>Ֆիլմեր (Films)</b></p>
+              <p><a href="https://youtu.be/qXnTOE22d4g?si=m2ZID71rvwzXEIPv">«Սասունցի Դավիթ» մուլտֆիլմ</a></p>
+              <p><a href="https://youtu.be/0nxmzC9aoTs?si=MNW6oKt_yQ4kX9gi">«Ճանապարհ դեպի Սասունցի Դավիթ» – ֆիլմ</a></p>
+            <p><b>Հոդվածներ (Articles)</b></p>
+              <p><a href="https://agbu.org/am/node/6483">Armenian Super Heroes - Lusine Minasyan (AGBU)</a></p>
+              <p><a href="https://melinezhamkochyanblog.wordpress.com/2021/11/19/%D5%BD%D5%A1%D5%BD%D5%B6%D5%A1-%D5%AE%D5%BC%D5%A5%D6%80%E2%80%A4-%D5%BE%D5%A5%D6%80%D5%AC%D5%B8%D6%82%D5%AE%D5%B8%D6%82%D5%A9%D5%B5%D5%B8%D6%82%D5%B6/">Սասնա ծռեր․ վերլուծություն - Մխիթար Սեբաստացի կրթահամալիր «Ավագ դպրոց»-ի 12-րդ դասարանի աշակերտուհի Մելինե Ժամկոչյան</a></p>
+              <p><a href="https://www.academia.edu/5669112/%D5%84%D5%AB_%D5%A4%D5%AB%D5%BF%D5%A1%D6%80%D5%AF%D5%B8%D6%82%D5%B4_%D4%BD%D5%A1%D5%B9_%D5%8A%D5%A1%D5%BF%D5%A1%D6%80%D5%A1%D5%A6%D5%AB%D5%AB_%D5%BE%D5%A5%D6%80%D5%A1%D5%A2%D5%A5%D6%80%D5%B5%D5%A1%D5%AC_A_note_on_Xa%C4%8D_Patarazi_">Մի դիտարկում Խաչ Պատարազիի վերաբերյալ (A note on Xač‘ Patarazi) - Հրաչ Մարտիրոսյան</a></p>
+              <p><a href="https://surl.lu/vjoezf">«Վահագնի երգը» և հայկական էպոսը (նոր տեսակետ հայկական էպոսի ծագման և ձևավորման վերաբերյալ)․ The "song of Vahagn" and the Armenian epic (a new view on the origin and formation of the Armenian epic)) - Արմեն Պետրոսյան</a></p>              
+            <p><b>Գրքեր (Books)</b></p>
+              <p><a href="http://publishing.ysu.am/files/Sasna_Tsrer.pdf">Սասնա Ծռեր. պատում, մոտիվ, գրքային ավանդույթ – լիարժեք PDF բնագիր՝ Հայկ Համբարձումյանի խմբագրությամբ, ԵՊՀ հրատարակություն, 2018</a></p>
+              <p><a href="https://www.goodreads.com/book/show/59741253">Ազատ Եղիազարյան. «Սասնա ծռեր» էպոսի պոետիկան, «Անթարես» հրատ., 2013: հայերենից թարգմանեց Ս. Պիտեր Քաուին, Կոստա Մեսա, Կալիֆորնիա, «Մազդա» հրատ., 2008</a></p>
+            <p><b>Աուդիոգրքեր (Audiobooks)</b></p>
+              <p><a href="https://www.youtube.com/watch?v=LIs5gnlWxEk&ab_channel=IrinaMinasyan">Daredevils of Sassoun / Sasuntsi Davit / Armenian heroic epic poem - Իրինա Մինասյան։ Համահավաքի սկզբի մասը, որը ներառում է առաջին ճյուղի մի հատված։</a></p>
+              <p><a href="https://youtube.com/playlist?list=PL9GY4_i2mPxXrfQKevbX-b66FVNm3wsxK&si=moa1Hl1ZWO7VM6nh">«Սասնա ծռեր» (պատում) - Ռադիո Հեքիաթ։ Սա պատում է, համահավաքը չէ։</a></p>
+              <p><a href="https://www.youtube.com/watch?v=LUoLSSfo61c&ab_channel=AlphaNewsArmeniannewsnetwork">«Սասնա Ծռեր» – «Սասունցի Դավիթ»։ Սա միայն մի հատված է։</a></p>
+            <p><b>Նկարներ (Images)</b></p>
+              <p>Նկարները գեներացվել են ChatGPT 4.0 մոդելի կողմից:</p>
+              <p class="trans">Images were generated with the ChatGPT 4.0 model.</p>
+        </div>        `,
+        Tsovinar: `
+        <div class="hero-description">
+            <h2 style>Դու Ծովինարն ես</h2>
+            <h3>You are Tsovinar</h3>
+            <img src="https://lh3.googleusercontent.com/d/1z9plhIVMdCLUzE_50ibFy1KEpDCZJJLT=w300">
+            <p class="ita">
+              Դու իմաստուն ես, հանգիստ ու միշտ մտածում ես մինչև մի բան անելը։ Դու հավատում ես խաղաղությանը, ընտանիքին ու քո արժեքներին հավատարիմ ես մնում, նույնիսկ երբ ուրիշները փորձում են ճնշել քեզ ինչ-ինչ իրավիճակներում։ Դու շատախոս չես, բայց երբ խոսում ես, իմաստալից մտքեր ես արտահայտում: 
+            </p>
+            <p class="ita trans">
+              You are wise, calm, and always think before you act. You believe in peace, family, and staying true to your values, even when others try to pressure you into certain situations. You are not a talkative person, but when you do speak, you express meaningful thoughts.
+            </p>
+            <p>
+              Ծովինարը «Սասնա Ծռեր» էպոսի առաջին ճյուղի գլխավոր կերպարներից է, որը մեզ հանդիպում է պատմության հենց սկզբում։ Ծովինարը երկու գլխավոր հերոսների մայրն է, և առանց նրա Սասնա Ծռեր էպոսի պատմությունը չէր սկսվի։ Նա հայտնի է իր իմաստությամբ և գեղեցկությամբ։ 
+            </p>
+            <p class="trans">
+                Tsovinar is one of the main characters in the first branch of the epic, whom we meet at the beginning of the story. She is the mother of two main characters, and without her, the story of the Daredevils of Sassoun would not have begun. She is known for her wisdom and beauty.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+              Իրիշկեցին, ի՞նչ տեսնեն,—<br>
+              <strong>Էնպես խորոտ աղջիկ մի էրևաց,</strong><br>
+              Արևուն կ’ասեր. «Դու դուրս մ’էլներ, ե՛ս դուրս էլնեմ»։<br>
+              <strong>Աղջիկ էնպես խորոտ, էնպես խորոտ,</strong><br>
+              Որ տասնուչորս ավուր լուսնին կը նմաներ,<br>
+              Որ յոթ սարի էտևեն կ’էլնի<br>
+            </p>
+            <p style="text-align: center">***</p>
+            <p>
+              Նա ստիպված ամուսնանում է Բաղդադի թագավորի հետ՝ իր հոր թագավորությունը փրկելու համար։ 
+            </p>
+            <p class="trans">
+              She is forced to marry the king of Baghdad to save her father’s kingdom.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+              Ծովինար խանում ասաց.<br>
+              — Որ ես էն կռապաշտ թագավոր չառնեմ, <br>
+              Զամեն տի սպանի իմ պատճառով,<br>
+              <strong>Աղեկն էն է, ե՛ս էրթամ,</strong><br>
+              Ուրիշ մարդու թող բան չըլնի:<br>
+              Ե՛ս մենակ մեռնիմ իմ հոր թերեն.<br>
+              Ես մեկ ջան եմ, էրթամ, կորսըվիմ,<br>
+              <strong>Զանց մեր Հայաստան էրկիր ավերի,</strong><br>
+              Էն հազար հազար հոգիք կորուսանին: <br>
+              <strong>Դարձավ ասաց.— Հա՛յրիկ, ինձ տուր էնոր: </strong><br>
+            </p>
+            <p style="text-align: center">***</p>
+            <p>
+              Մի օր ջուր է խմում սուրբ աղբյուրից և հղիանում է։ 
+            </p>
+            <p class="trans">
+              One day, she drinks water from a holy spring and becomes pregnant.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+                Աստուծու հրամանով, ծովըն բացվավ,<br>
+                Մի շատ համեղ ջուր դուրս էկավ:<br>
+                Նայեց, տեսավ՝ մեկ ջոջ քար կա ծովու պռուկ, <br>
+                Սիպտակ ադբուր մի էդ քարից կը թալի. <br>
+                Ջուրն էլ էդ քարի չորս բոլոր բռներ էր.<br>
+                Մարդ չէր կարնա առանց հալավ հանելու,<br>
+                Էդ ադբուր էրթա, որ ջուր խմի:<br>
+                Ինքն իր շորեր էհան, գնաց էդ ադբուր, <br>
+                Բուռ էտու էդ անմահական աղբըրի մեջ, <br>
+                Մի բուռ լիք ջուր խմեց,<br>
+                Սեկ էլ՝ մի բուռ կիսատ:<br>
+                Սղբուրըն ցամաքավ:<br>
+                <strong>Էդ էրկու բուռ ջրից հղացավ:</strong><br>
+            </p>
+            <p style="text-align: center">***</p>
+            <p>
+              Երբ մարդիկ իմանում են, չեն հավատում, որ ջրից է հղիացել, բայց դա նրան չի կոտրում: Նա ունենում է երկու տղա՝ Սանասարին և Բաղդասարին, որոնք դառնում են առաջին ճյուղի գլխավոր հերոսները։
+            </p>
+            <p class="trans">
+              When people find out, they don't believe that she became pregnant from water, but that doesn’t break her. She has two sons, Sanasar and Baghdasar, who became the main character of the first branch of the epic.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+                — Ձեր թագավորին դատաստան չկա՞, <br>
+                <strong>Չէ՞ որ էրեխով կնկան վիզ կտրել</strong><br>
+                Մեկ անգամից էրկո՛ւ մարդ ըսպանել է։ <br>
+                <strong>Խալիֆային ասա՝ դադրե՛ք,</strong><br>
+                Չուր ես իմ էրեխան բերեմ.<br>
+                Էն ժամանակ,— տեսնենք՝<br>
+                Տղա է, ինչ է,— թող իմ վիզ կտրեն։<br>
+                Թե որ կը հարցուցեք, ասաց,<br>
+                Իմ հոր տնեն որ կուս էկեր եմ,<br>
+                Մինչեւ էսօր դեռ կուս եմ ես.<br>
+                Իմ էրեխան, աստծու կամքով,<br>
+                Ծովի ջրից է գոյացե։<br>
+            </p>
+            <hr>
+            <h2>Իմանալ ավելին</h2>
+            <h3>Learn more</h3>
+            <p>
+              «Սասնա ծռեր» էպոսը արտացոլում է հայ ժողովրդի հերոսական ոգին և անդադար պայքարը՝ հանուն հայրենիքի պաշտպանության և ազգային ինքնության պահպանման։ Ստեղծվել է 8–9-րդ դարերին։ Էպոսի հերոսները միայն թշնամիներին հակազդող մարտիկներ չէին, այլ նաև նվիրված էին իրենց ժողովրդին՝ օգնելով առօրյա կյանքում առաջացած խնդիրների և գործերի լուծման մեջ։ Թեև նրանք օժտված էին գերբնական ուժերով, նրանց կերպարները պատմության էջերում առանձնանում են իրենց մարդասիրությամբ, անկեղծությամբ և երբեմն էլ միամտությամբ։
+            </p>
+            <p class="trans">
+              The Daredevils of Sassoun epic reflects the heroic spirit of the Armenian people and their ongoing struggle to defend their homeland and preserve their national identity. It was created during the 8th–9th centuries. The heroes of the epic were not only warriors who fought against enemies, but were also devoted to their people, always prepared to lend a helping hand. Even though they had supernatural strength, they stood out in history for their kindness, honesty, and even occasionally their naivety.
+            </p>
+            <p>
+              Էպոսը կազմված է չորս ճյուղեից,  որոնցից յուրաքանչյուրը կոչվել է տվյալ ճյուղի  գլխավոր հերոսի անունով՝ «Սանասար և Բաղդասար», «Մեծ Մհեր», «Սասունցի Դավիթ» և «Փոքր Մհեր»։ Այս չորս ճյուղերը ներկայացնում են չորս սերունդներ, որոնք իրար հետ կապված են ազգակցական կապերով։ «Սասնա ծռեր» էպոսը ծագել է հայկական լեռնաշխարհի հին քաղաքներից մեկում՝ Սասունում, որտեղից էլ ստացել է իր անունը։ Սասունցիները հայտնի էին իրենց հայրենասիրությամբ, հողի նկատմամբ առանձնահատուկ սիրով, ինչպես նաև որոշ չափով յուրահատուկ՝ «ծուռ» բնավորությամբ, որն էլ հաճախ երևում է էպոսի հերոսների վարքագծում։
+            </p>
+            <p class="trans">
+              The epic is made up of four branches, each named after the main hero of that section: Sanasar and Baghdasar, Great Mher (the First) , David of Sassoun, and Little Mher (the Second). These four branches represent the stories of members from four generations of a family. The epic originated in one of the ancient towns of the Armenian Highlands, Sassoun, which is also where it gets its name. The people of Sassoun were known for their love and respect for their homeland and uniquely “stubborn” character, which is also seen in the behavior of the epic’s heroes.
+            </p>
+            <p>
+              Էպոսը փոխանցվել է բանավոր ձևով՝ տարբեր պատումների միջոցով, որոնք պահպանվել են հայոց աշխարհի տարբեր շրջաններում։ Առանձնանում են Մշո, Մոկաց և Սասնա պատումները։ Համահավաքը՝ այսինքն էպոսի տարբեր պատումների հիման վրա կազմված միացյալ տարբերակը, նպատակ ունի ներկայացնելու էպոսի ամբողջական կառուցվածքը՝ առանց տարածաշրջանային տարբերակների բաշխման։ Էպոսի համահավաք տարբերակը հրատարակվել է 1874 թվականին։ Հետագայում համահավաքի կազմման աշխատանքներն իրականացվել են Մանուկ Աբեղյանի ղեկավարությամբ՝ մի խումբ գիտնականների մասնակցությամբ, որոնք համադրել են պատումները և ձևավորել մեկ ամբողջական տեքստ։
+            </p>
+            <p class="trans">
+              The epic was passed down orally through different versions preserved in various regions of historical Armenia. The main known versions are from Mush, Mokk, and Sassoun. The hamahavak (unified version), which combines different versions of the epic into one complete structure, was created to present the full story without separating it by regional variants. The unified version of the epic was published in 1874. Later, the compilation of the hamahavak was led by Manuk Abeghyan with a team of scholars who collected and organized the different versions into one complete text.
+            </p>
+            <p>
+              <em>«Սասնա ծռեր» էպոսի ո՞ր հերոսն ես դու</em> խաղը ստեղծվել է վերոնշյալ համահավաք բնագրի հիման վրա։ 
+            </p>
+            <p class="trans">
+              The quiz <em>Which Daredevils of Sassoun Hero Are You?</em> was created based on this unified version of the epic.
+            </p>
+            <br>
+            <p><b>Տեսանյութներ (Videos)</b></p>
+              <p><a href="https://youtu.be/_VJkXAykIOQ?si=h3_--vQ393w4FIjE">«Սասնա ծռեր» էպոս – համառոտ տեսանյութ</a></p>
+              <p><a href="https://www.youtube.com/watch?v=I-BKvMHILtw&ab_channel=%3A%D4%B2%D5%B8%D6%82%D5%B6TV">«Սասնա ծռեր» էպոսի պատումները – Հայկ Համբարձումյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=GGAP8cKCeD0&ab_channel=ShoghakatTVcompany">Ո՞ր բնագրով կարդալ էպոսը - Հայկ Համբարձումյան և Արքմենիկ Նիկողոսյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=Y1KLupAE94Q&ab_channel=ShoghakatTVcompany">«Սասնա ծռեր» էպոսի հայտնությունը - Հայկ Համբարձումյան և Արքմենիկ Նիկողոսյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=kudxQSW8blM&ab_channel=ShoghakatTVcompany">Էպոսի արդիականությունը - Հայկ Համբարձումյան և Ազատ Եղյազարյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=L51LsAiNU2c&ab_channel=ShoghakatTVcompany">«Սասնա ծռեր» էպոսի նոր համահավաք բնագիրը - Անահիտ Մարգարյանի և Հայկ Համբարձումյանի զրույցը</a></p>
+              <p><a href="https://www.youtube.com/watch?v=w5fqEx3xHzk&ab_channel=evnmag">Հարցուփորձ #1 | Էպոսագետ Հայկ Համբարձումյանը՝ «Սասնա ծռերի» մասին</a></p>
+            <p><b>Ֆիլմեր (Films)</b></p>
+              <p><a href="https://youtu.be/qXnTOE22d4g?si=m2ZID71rvwzXEIPv">«Սասունցի Դավիթ» մուլտֆիլմ</a></p>
+              <p><a href="https://youtu.be/0nxmzC9aoTs?si=MNW6oKt_yQ4kX9gi">«Ճանապարհ դեպի Սասունցի Դավիթ» – ֆիլմ</a></p>
+            <p><b>Հոդվածներ (Articles)</b></p>
+              <p><a href="https://agbu.org/am/node/6483">Armenian Super Heroes - Lusine Minasyan (AGBU)</a></p>
+              <p><a href="https://melinezhamkochyanblog.wordpress.com/2021/11/19/%D5%BD%D5%A1%D5%BD%D5%B6%D5%A1-%D5%AE%D5%BC%D5%A5%D6%80%E2%80%A4-%D5%BE%D5%A5%D6%80%D5%AC%D5%B8%D6%82%D5%AE%D5%B8%D6%82%D5%A9%D5%B5%D5%B8%D6%82%D5%B6/">Սասնա ծռեր․ վերլուծություն - Մխիթար Սեբաստացի կրթահամալիր «Ավագ դպրոց»-ի 12-րդ դասարանի աշակերտուհի Մելինե Ժամկոչյան</a></p>
+              <p><a href="https://www.academia.edu/5669112/%D5%84%D5%AB_%D5%A4%D5%AB%D5%BF%D5%A1%D6%80%D5%AF%D5%B8%D6%82%D5%B4_%D4%BD%D5%A1%D5%B9_%D5%8A%D5%A1%D5%BF%D5%A1%D6%80%D5%A1%D5%A6%D5%AB%D5%AB_%D5%BE%D5%A5%D6%80%D5%A1%D5%A2%D5%A5%D6%80%D5%B5%D5%A1%D5%AC_A_note_on_Xa%C4%8D_Patarazi_">Մի դիտարկում Խաչ Պատարազիի վերաբերյալ (A note on Xač‘ Patarazi) - Հրաչ Մարտիրոսյան</a></p>
+              <p><a href="https://surl.lu/vjoezf">«Վահագնի երգը» և հայկական էպոսը (նոր տեսակետ հայկական էպոսի ծագման և ձևավորման վերաբերյալ)․ The "song of Vahagn" and the Armenian epic (a new view on the origin and formation of the Armenian epic)) - Արմեն Պետրոսյան</a></p>              
+            <p><b>Գրքեր (Books)</b></p>
+              <p><a href="http://publishing.ysu.am/files/Sasna_Tsrer.pdf">Սասնա Ծռեր. պատում, մոտիվ, գրքային ավանդույթ – լիարժեք PDF բնագիր՝ Հայկ Համբարձումյանի խմբագրությամբ, ԵՊՀ հրատարակություն, 2018</a></p>
+              <p><a href="https://www.goodreads.com/book/show/59741253">Ազատ Եղիազարյան. «Սասնա ծռեր» էպոսի պոետիկան, «Անթարես» հրատ., 2013: հայերենից թարգմանեց Ս. Պիտեր Քաուին, Կոստա Մեսա, Կալիֆորնիա, «Մազդա» հրատ., 2008</a></p>
+            <p><b>Աուդիոգրքեր (Audiobooks)</b></p>
+              <p><a href="https://www.youtube.com/watch?v=LIs5gnlWxEk&ab_channel=IrinaMinasyan">Daredevils of Sassoun / Sasuntsi Davit / Armenian heroic epic poem - Իրինա Մինասյան։ Համահավաքի սկզբի մասը, որը ներառում է առաջին ճյուղի մի հատված։</a></p>
+              <p><a href="https://youtube.com/playlist?list=PL9GY4_i2mPxXrfQKevbX-b66FVNm3wsxK&si=moa1Hl1ZWO7VM6nh">«Սասնա ծռեր» (պատում) - Ռադիո Հեքիաթ։ Սա պատում է, համահավաքը չէ։</a></p>
+              <p><a href="https://www.youtube.com/watch?v=LUoLSSfo61c&ab_channel=AlphaNewsArmeniannewsnetwork">«Սասնա Ծռեր» – «Սասունցի Դավիթ»։ Սա միայն մի հատված է։</a></p>
+            <p><b>Նկարներ (Images)</b></p>
+              <p>Նկարները գեներացվել են ChatGPT 4.0 մոդելի կողմից:</p>
+              <p class="trans">Images were generated with the ChatGPT 4.0 model.</p>
+        </div>        `,
+        Khatun: `
+        <div class="hero-description">
+            <h2 style>Դու Իսմիլ Խաթունն ես</h2>
+            <h3>You are Ismil Khatun</h3>
+            <img src="https://lh3.googleusercontent.com/d/1hp80rkATjC_iR8xCzbXRcGYJy82aIkFT=w300">
+            <p class="ita">
+              Դու խորհրդավոր և հմայիչ անձնավորություն ես, մի մարդ, որի ներկայությունը զգացվում է դեռ մինչ խոսելը։ Իսմիլ Խաթունը ոչ միայն ուժեղ կնոջ կերպար է, այլև խորաթափանց դիվանագետ։ Դու ունես սուր միտք, ռազմավարական մտածողություն և կարողանում ես ազդեցություն թողնել առանց ուղիղ բախումների։ Քո ուժը քո խելամտության, գրավչության և աննկատ ղեկավարելու ունակության մեջ է։ Դու հաճախ մարդկանց ստիպում ես իրադարձություններին նայել այլ տեսանկյունից։ Քեզ դժվար է խաբել, քանի որ տեսնում ես մանրուքները, որ ուրիշները բաց են թողնում։ Շրջապատումդ երբեմն քեզ չեն հասկանա, քանի որ դու միշտ մի քայլ առաջ ես մտածում։ Սակայն քեզ ճանաչողները գիտեն, որ դու հավատարիմ ես և երբ աչքդ դնում ես ինչ-որ բանի վրա, ոչինչ չի կարող կանգնեցնել քեզ։ Քեզ համար կարևորը միայն հաղթելն ու իշխելը չէ։ Դու նաև խիստ կարգուկանոնի ես ձգտում, քո ընկալմամբ արդարության և մի միջավայրի, որտեղ դու ես ձևավորում կանոնները։ 
+            </p>
+            <p class="ita trans">
+              You are a mysterious and charming person, someone whose presence is felt even before you speak. Ismil Khatun embodies not just the strength of a formidable woman but the finesse of a master diplomat. With a razor-sharp intellect and a gift for strategy, you influence outcomes without overt confrontation. Your strength lies in your intelligence, charm, and ability to lead without being noticed. You often make people look at events from a different perspective. It is difficult to deceive you, because you see the details that others miss. Though often misunderstood by those who can’t keep up, those who truly know you understand your fierce loyalty and unwavering resolve. Once your mind is set, obstacles become irrelevant. Winning and dominating are not the only things that are important to you. You also strive for strict order, for your perception of justice, and an environment where you shape the rules.
+            </p>
+            <p>
+              Իսմիլ Խաթունը Մելիքի կինն էր։ Նրա խորամանկությամ շնորհիվ Մհերը յոթ տարի մնաց Մըսրում։ Մըսրի նոր ժառանգորդը Իսմիլի որդին էր՝ Մսրա Մելիքը։ Չնայած իր խելամիտ ու խորամանկ բնույթին, Իսմիլը նաև սրտով բարի կին էր։ Երբ Մհերի և Արմաղան Խաթունի որդի Դավիթը ծնվեց ու հայտնվեց Մըսրում, Իսմիլ Խաթունն իր վրա վերցրեց նրա խնամքն ու մեծացրեց նրան։ Նա ամեն կերպ պաշտպանում էր Դավթին սեփական որդուց՝ Մսրա Մելիքից, երբ վերջինս փորձում էր սպանել Դավթին:
+            </p>
+            <p class="trans">
+              Ismil Khatun was the wife of Melik. Through her cunning actions, Mher the First remained in the Kingdom of Misr for seven years. The new heir to Misr was Ismil’s son, Msra Melik. Despite her clever and cunning nature, Ismil was also a kind-hearted woman. When the son of Mher and Armaghan Khatun, Davit, was born and appeared in the kingdom of Misr, Ismil Khatun took on the responsibility of his care and raised him.
+            </p>
+            <p>
+              Իսմիլ Խաթունի հավակնոտ բնավորությունը ի հայտ է գալիս իր հրավերի մեջ, երբ Մեծ Մհերին կանչում է Մըսրա թագավորություն:
+            </p>
+            <p class="trans">
+                Ismil Khatun's ambitious character is evident in her invitation when she summons Great Mher to the kingdom of Misr.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+              Մհեր կարդաց, տեսավ՝ Իսմիլ խաթուն գրեր է.<br>
+              <strong>— Արի՛, ինձ ա՛ռ.<br>
+              Գոտիկ-լաչակ, կո, կ’ուղարկեմ,<br>
+              Էն որ Սասուն քո ձեռն է,<br>
+              Մըսըրն էլ թող մնա քո ձեռ։</strong><br>
+              Թե դուն չըգաս՝ քան զիս շատ կընիկ ես։<br>
+              Դուն Մելիքի հետ ուխտ ունիս,<br>
+              Որ էնոր կնիկ-էրեխեք պահես։<br>
+              Մհեր ասաց.— Է՜յ, կտրիճներ,<br>
+              Աստծու ուխտ թող վեր ինձ ըլնի։<br>
+              Էկեք, էրթանք մեր տուն,<br>
+              Էկեք, փըշուր մի հաց կերեք,— գացեք,<br>
+              Մըսրա խաթնին բարև տարեք։<br>
+              Քառսուն ավար վրեն կը գամ իր մոտ։<br>
+              Տեսնեմ էդ ի՞նչ է կա։<br>
+            </p>
+            <p style="text-align: center">***</p>
+            <p>
+              Իսմիլ Խաթունը իր խորամանկությամբ պահեց Մհերին իր գայթակղության տակ յոթ տարի։
+            </p>
+            <p class="trans">
+              Ismil Khatun, with her cunning, kept Mher the First under her spell for seven years.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+              Իսմիլ խաթան տեսավ՝ Մհեր պիտի դառնա,<br>
+              Ծառաներին ասաց.— Ձեր տուն ավրի՝<br>
+              Նայեք, յոթը տարվա գինի չըկա՞.<br>
+              Էնի պիտի դառնա գնա, շուտ արեք, շո՛ւտ։<br>
+              Ծառաներ էլան, յոթ տարվա գինին բերին,<br>
+              Տվին Մհերին՝ վեր ձիան. Մհեր խմեց։<br>
+              Մհեր որ խմեց՝ Մհերի ճակատ բռնեց։<br>
+              Իսմիլ խաթուն հրաման տվեց.– Զձին բռնեք։<br>
+              Զձին բռնին՝ Մհեր իջավ տակ։<br>
+            </p>
+            <p style="text-align: center">***</p>
+            <p>
+              Իր իշխանությունը պահելու համար Իսմիլ Խաթունը շարժվում էր առաջ իր իսկ կանոններով, չթողնելով Մեծ Մհերին վերադառնալ Սասուն։<br>
+            </p>
+            <p class="trans">
+              To maintain her power, Ismil Khatun moved forward according to her own rules, not allowing Mher the First to return to Sassoun.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+                Իսմիլ ասաց.— Ուղորդ կ’ասեն,Որ հաստակող են սասնեցիք։<br>
+                Ձեր էրկիր ավերակ հո չէ՞.<br>
+                Կրակ հո չի՛ պակասե Սասուն,<br>
+                Որ դու էկիր էսա տեղեն կրակ տանես.<br>
+                Իջիր տակ, հյուրասիրվե, նոր ե՛լ, գընա։<br>
+                <strong>— Չէ՛, չէ՝, ջանըմ,— ասաց Մհեր,—<br>
+                Էդ խոսքեր որ դու ինձ կ’ասես՝ ես չեմ ճանչնա։<br>
+                Ասա, նայեմ՝ ի՞նչ է քո ասելիք։</strong><br>
+                Իսմիլ խաթան տեսավ՝ Մհեր պիտի դառնա,<br>
+                Ծառաներին ասաց.— Ձեր տուն ավրի՝<br>
+                Նայեք, յոթը տարվա գինի չըկա՞.<br>
+                Էնի պիտի դառնա գնա, շուտ արեք, շո՛ւտ։<br>
+                Ծառաներ էլան, յոթ տարվա գինին բերին,<br>
+                Տվին Մհերին՝ վեր ձիան. Մհեր խմեց։<br>
+                Մհեր որ խմեց՝ Մհերի ճակատ բռնեց։<br>
+                Իսմիլ խաթուն հրաման տվեց.– Զձին բռնեք։<br>
+                Զձին բռնին՝ Մհեր իջավ տակ։<br>
+                Իսմիլ խաթուն տարավ զՄհեր պալատ,<br>
+                Էնտեղ էնոր բարև էկար արավ։<br>
+                Մհեր հարցուց.— Ինչի՞ ես ինձ կանչե։<br>
+                Ասաց.– Մհեր, կանչեր եմ՝ կը խնդրեմ—<br>
+                Էս մեր էրկիր խաղաղեցուս.<br>
+                Մեր յոթ իշխաններ ինձ չեն ճանչնա<br>
+            </p>
+            <hr>
+            <h2>Իմանալ ավելին</h2>
+            <h3>Learn more</h3>
+            <p>
+              «Սասնա ծռեր» էպոսը արտացոլում է հայ ժողովրդի հերոսական ոգին և անդադար պայքարը՝ հանուն հայրենիքի պաշտպանության և ազգային ինքնության պահպանման։ Ստեղծվել է 8–9-րդ դարերին։ Էպոսի հերոսները միայն թշնամիներին հակազդող մարտիկներ չէին, այլ նաև նվիրված էին իրենց ժողովրդին՝ օգնելով առօրյա կյանքում առաջացած խնդիրների և գործերի լուծման մեջ։ Թեև նրանք օժտված էին գերբնական ուժերով, նրանց կերպարները պատմության էջերում առանձնանում են իրենց մարդասիրությամբ, անկեղծությամբ և երբեմն էլ միամտությամբ։
+            </p>
+            <p class="trans">
+              The Daredevils of Sassoun epic reflects the heroic spirit of the Armenian people and their ongoing struggle to defend their homeland and preserve their national identity. It was created during the 8th–9th centuries. The heroes of the epic were not only warriors who fought against enemies, but were also devoted to their people, always prepared to lend a helping hand. Even though they had supernatural strength, they stood out in history for their kindness, honesty, and even occasionally their naivety.
+            </p>
+            <p>
+              Էպոսը կազմված է չորս ճյուղեից,  որոնցից յուրաքանչյուրը կոչվել է տվյալ ճյուղի  գլխավոր հերոսի անունով՝ «Սանասար և Բաղդասար», «Մեծ Մհեր», «Սասունցի Դավիթ» և «Փոքր Մհեր»։ Այս չորս ճյուղերը ներկայացնում են չորս սերունդներ, որոնք իրար հետ կապված են ազգակցական կապերով։ «Սասնա ծռեր» էպոսը ծագել է հայկական լեռնաշխարհի հին քաղաքներից մեկում՝ Սասունում, որտեղից էլ ստացել է իր անունը։ Սասունցիները հայտնի էին իրենց հայրենասիրությամբ, հողի նկատմամբ առանձնահատուկ սիրով, ինչպես նաև որոշ չափով յուրահատուկ՝ «ծուռ» բնավորությամբ, որն էլ հաճախ երևում է էպոսի հերոսների վարքագծում։
+            </p>
+            <p class="trans">
+              The epic is made up of four branches, each named after the main hero of that section: Sanasar and Baghdasar, Great Mher (the First) , David of Sassoun, and Little Mher (the Second). These four branches represent the stories of members from four generations of a family. The epic originated in one of the ancient towns of the Armenian Highlands, Sassoun, which is also where it gets its name. The people of Sassoun were known for their love and respect for their homeland and uniquely “stubborn” character, which is also seen in the behavior of the epic’s heroes.
+            </p>
+            <p>
+              Էպոսը փոխանցվել է բանավոր ձևով՝ տարբեր պատումների միջոցով, որոնք պահպանվել են հայոց աշխարհի տարբեր շրջաններում։ Առանձնանում են Մշո, Մոկաց և Սասնա պատումները։ Համահավաքը՝ այսինքն էպոսի տարբեր պատումների հիման վրա կազմված միացյալ տարբերակը, նպատակ ունի ներկայացնելու էպոսի ամբողջական կառուցվածքը՝ առանց տարածաշրջանային տարբերակների բաշխման։ Էպոսի համահավաք տարբերակը հրատարակվել է 1874 թվականին։ Հետագայում համահավաքի կազմման աշխատանքներն իրականացվել են Մանուկ Աբեղյանի ղեկավարությամբ՝ մի խումբ գիտնականների մասնակցությամբ, որոնք համադրել են պատումները և ձևավորել մեկ ամբողջական տեքստ։
+            </p>
+            <p class="trans">
+              The epic was passed down orally through different versions preserved in various regions of historical Armenia. The main known versions are from Mush, Mokk, and Sassoun. The hamahavak (unified version), which combines different versions of the epic into one complete structure, was created to present the full story without separating it by regional variants. The unified version of the epic was published in 1874. Later, the compilation of the hamahavak was led by Manuk Abeghyan with a team of scholars who collected and organized the different versions into one complete text.
+            </p>
+            <p>
+              <em>«Սասնա ծռեր» էպոսի ո՞ր հերոսն ես դու</em> խաղը ստեղծվել է վերոնշյալ համահավաք բնագրի հիման վրա։ 
+            </p>
+            <p class="trans">
+              The quiz <em>Which Daredevils of Sassoun Hero Are You?</em> was created based on this unified version of the epic.
+            </p>
+            <br>
+            <p><b>Տեսանյութներ (Videos)</b></p>
+              <p><a href="https://youtu.be/_VJkXAykIOQ?si=h3_--vQ393w4FIjE">«Սասնա ծռեր» էպոս – համառոտ տեսանյութ</a></p>
+              <p><a href="https://www.youtube.com/watch?v=I-BKvMHILtw&ab_channel=%3A%D4%B2%D5%B8%D6%82%D5%B6TV">«Սասնա ծռեր» էպոսի պատումները – Հայկ Համբարձումյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=GGAP8cKCeD0&ab_channel=ShoghakatTVcompany">Ո՞ր բնագրով կարդալ էպոսը - Հայկ Համբարձումյան և Արքմենիկ Նիկողոսյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=Y1KLupAE94Q&ab_channel=ShoghakatTVcompany">«Սասնա ծռեր» էպոսի հայտնությունը - Հայկ Համբարձումյան և Արքմենիկ Նիկողոսյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=kudxQSW8blM&ab_channel=ShoghakatTVcompany">Էպոսի արդիականությունը - Հայկ Համբարձումյան և Ազատ Եղյազարյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=L51LsAiNU2c&ab_channel=ShoghakatTVcompany">«Սասնա ծռեր» էպոսի նոր համահավաք բնագիրը - Անահիտ Մարգարյանի և Հայկ Համբարձումյանի զրույցը</a></p>
+              <p><a href="https://www.youtube.com/watch?v=w5fqEx3xHzk&ab_channel=evnmag">Հարցուփորձ #1 | Էպոսագետ Հայկ Համբարձումյանը՝ «Սասնա ծռերի» մասին</a></p>
+            <p><b>Ֆիլմեր (Films)</b></p>
+              <p><a href="https://youtu.be/qXnTOE22d4g?si=m2ZID71rvwzXEIPv">«Սասունցի Դավիթ» մուլտֆիլմ</a></p>
+              <p><a href="https://youtu.be/0nxmzC9aoTs?si=MNW6oKt_yQ4kX9gi">«Ճանապարհ դեպի Սասունցի Դավիթ» – ֆիլմ</a></p>
+            <p><b>Հոդվածներ (Articles)</b></p>
+              <p><a href="https://agbu.org/am/node/6483">Armenian Super Heroes - Lusine Minasyan (AGBU)</a></p>
+              <p><a href="https://melinezhamkochyanblog.wordpress.com/2021/11/19/%D5%BD%D5%A1%D5%BD%D5%B6%D5%A1-%D5%AE%D5%BC%D5%A5%D6%80%E2%80%A4-%D5%BE%D5%A5%D6%80%D5%AC%D5%B8%D6%82%D5%AE%D5%B8%D6%82%D5%A9%D5%B5%D5%B8%D6%82%D5%B6/">Սասնա ծռեր․ վերլուծություն - Մխիթար Սեբաստացի կրթահամալիր «Ավագ դպրոց»-ի 12-րդ դասարանի աշակերտուհի Մելինե Ժամկոչյան</a></p>
+              <p><a href="https://www.academia.edu/5669112/%D5%84%D5%AB_%D5%A4%D5%AB%D5%BF%D5%A1%D6%80%D5%AF%D5%B8%D6%82%D5%B4_%D4%BD%D5%A1%D5%B9_%D5%8A%D5%A1%D5%BF%D5%A1%D6%80%D5%A1%D5%A6%D5%AB%D5%AB_%D5%BE%D5%A5%D6%80%D5%A1%D5%A2%D5%A5%D6%80%D5%B5%D5%A1%D5%AC_A_note_on_Xa%C4%8D_Patarazi_">Մի դիտարկում Խաչ Պատարազիի վերաբերյալ (A note on Xač‘ Patarazi) - Հրաչ Մարտիրոսյան</a></p>
+              <p><a href="https://surl.lu/vjoezf">«Վահագնի երգը» և հայկական էպոսը (նոր տեսակետ հայկական էպոսի ծագման և ձևավորման վերաբերյալ)․ The "song of Vahagn" and the Armenian epic (a new view on the origin and formation of the Armenian epic)) - Արմեն Պետրոսյան</a></p>              
+            <p><b>Գրքեր (Books)</b></p>
+              <p><a href="http://publishing.ysu.am/files/Sasna_Tsrer.pdf">Սասնա Ծռեր. պատում, մոտիվ, գրքային ավանդույթ – լիարժեք PDF բնագիր՝ Հայկ Համբարձումյանի խմբագրությամբ, ԵՊՀ հրատարակություն, 2018</a></p>
+              <p><a href="https://www.goodreads.com/book/show/59741253">Ազատ Եղիազարյան. «Սասնա ծռեր» էպոսի պոետիկան, «Անթարես» հրատ., 2013: հայերենից թարգմանեց Ս. Պիտեր Քաուին, Կոստա Մեսա, Կալիֆորնիա, «Մազդա» հրատ., 2008</a></p>
+            <p><b>Աուդիոգրքեր (Audiobooks)</b></p>
+              <p><a href="https://www.youtube.com/watch?v=LIs5gnlWxEk&ab_channel=IrinaMinasyan">Daredevils of Sassoun / Sasuntsi Davit / Armenian heroic epic poem - Իրինա Մինասյան։ Համահավաքի սկզբի մասը, որը ներառում է առաջին ճյուղի մի հատված։</a></p>
+              <p><a href="https://youtube.com/playlist?list=PL9GY4_i2mPxXrfQKevbX-b66FVNm3wsxK&si=moa1Hl1ZWO7VM6nh">«Սասնա ծռեր» (պատում) - Ռադիո Հեքիաթ։ Սա պատում է, համահավաքը չէ։</a></p>
+              <p><a href="https://www.youtube.com/watch?v=LUoLSSfo61c&ab_channel=AlphaNewsArmeniannewsnetwork">«Սասնա Ծռեր» – «Սասունցի Դավիթ»։ Սա միայն մի հատված է։</a></p>
+            <p><b>Նկարներ (Images)</b></p>
+              <p>Նկարները գեներացվել են ChatGPT 4.0 մոդելի կողմից:</p>
+              <p class="trans">Images were generated with the ChatGPT 4.0 model.</p>
+        </div>        `,
+        Melik: `
+        <div class="hero-description">
+            <h2 style>Դու Մսրա Մելիքն ես</h2>
+            <h3>You are Melik of Misr</h3>
+            <img src="https://lh3.googleusercontent.com/d/1wAHq5bhi9R2r4Je2UKVLfurgCu9tEsHX=w300">
+            <p class="ita">
+                Դու ուժեղ և նպատակասլաց անձնավորություն ես: Քեզ օրենքները չեն հետաքրքրում և քո նպատակներին հասնելու համար, պատրաստ ես ամեն ինչ անելու:  Քեզ համար առաջնային է նաև անձնական բարեկեցությունը և քո հեղինակությունը: Ուզում ես ամեն տեղ առաջինը լինել, դրա պատճառով ունես երկրորդը լինելու բարդույթ: Դու ազդեցիկ մարդ ես և կարևորում ես քաջությունը, բայց ինքդ հոգու խորքում վախեր ունես:
+            </p>
+            <p class="ita trans">
+              You are a strong and determined individual. Rules are of no interest to you and you are prepared to achieve your goals with whatever means necessary. Your personal well-being is of utmost importance to you, as well as how others perceive you. You aim to always be in first place, and have an issue with coming in second. You are an influential person, and value bravery, despite having fears within yourself. 
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+                Դավիթ չը գնաց, չ’անցավ թրի տակով,<br>
+                Կըշտով անցավ.<br>
+                Ճկութ քսվավ ի ջարդու քար՝<br>
+                Քարեն կրա՛կ էլավ։<br>
+                <br><strong>
+                Մըսրա Մելիք տեսավ՝<br>
+                Շա՛տ վախեցավ, ասաց.<br>
+                — Էդ դեռ պստիկ է՝ էսպես է—<br>
+                Որ մեծանա՝ ի՞նչ տի ըլնի։<br></strong>
+            </p>
+            <p style="text-align: center">***</p>
+            <p>
+                Մսրա Մելիքի կերպարը մեզ հանդիպում է «Սասնա Ծռեր» էպոսի երկորդ ճյուղում, երբ Իսմիլ Խաթունը խաբեությամբ որդի է ունենում Մեծ Մհերից՝ նրան 7 տարի իր մոտ հարբած պահելուց հետո: Խաթունը իր ոդու անունը դնում է Մելիք իր մահացած ամուսնու պատվին: Մսրա Մելիքը հակապատկերն է Սասունցի հերոսների՝ արդար ու ազնիվ հերոսների, նա մարմնավորում է հին աշխարհի դաժան ու նենգ իշխանի: Մսրա Մելիքը մեզ հիշեցնում է, թե ինչ է լինում, երբ իշխանությունը կառուցվում է ոչ թե վստահության ու պատվի, այլ սարսափի ու կեղծիքի վրա։ 
+            </p>
+            <p class="trans">
+              Melik of Misr is introduced to us in the second branch of “Daredevils of Sassoun”, when Ismil Khatun cunningly has a son with Mher the First after keeping him captive (and drunk) for seven years. Ismil Khatun names her son Melik after her late husband, Melik the First, king of Misr. Melik of Misr is the antagonist of Sassoun's fair and honest heroes,  showcasing the cruel and unfair rulers of the old world. Melik of Misr shows us what happens when a kingdom is built on the basis of fear, rather than loyalty and respect. 
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+                Մըսրա Մելիք որ իմացավ Սասնա Մհեր մեռե՝<br>
+                Կալնավ, թուղթ ուղարկեց,<br>
+                Իր տեղաց մեջ ցրվեց, զորք հավաքեց,<br>
+                <strong>Գնաց Սասնա տեղաց վերան.<br>
+                Սասնա էրկրի վերա իր սուր քաշեց,<br>
+                Սասնա ժողովուրդ կոտորեց,<br></strong>
+                Անհաշիվ խարջ ու խարաջ առավ,<br>
+                Քըշեց Սասնա տավար, օչխար,<br>
+                Սասուն ավրեց, առ ու ավար արավ։<br>
+            </p>
+            <p style="text-align: center">***</p>
+            <p>
+                Մելիքը գիտի իր ուզածը և չի փոշմանում կամ երկմտում որոշում կայացնելիս, նույնիսկ եթե իր որոշումը կարող է ուրիշներին վնասել: Մելիքը կարևորություն չի տալիս հավատարմությանը կամ ուրիշներին օգնության հասնելուն: Չի ուզում ընդունել, որ իրենից ուժեղները շատ են։ Միշտ ուզում է լինել բոլորից առավել և պատրաստ է անարդար միջոցներով հաղթահարել իր դժվարությունները: Մելիքը մեծանում է Դավթի հետ որպես ավագ եղբայր և հաճախ փորձում նրա հետ մրցել կամ Դավթին վնասել՝ հասկանով, որ Դավիթը իրենից ուժեղ է:
+            </p>
+            <p class="trans">
+              Melik knows what he wants and does not regret his decisions, even though his choices may cause harm to others. Melik doesn’t want to accept that others are stronger than him and is prepared to overcome his obstacles through unjust means. Loyalty and respect are not part of his personal values. Melik and Davit grew up together, as brothers, and Melik often tried to compete with and harm Davit, since he knew that Davit was stronger.
+            </p>
+            <p style="text-align: center">***</p>
+            <p class="quote">
+                — Է, մարե ,— ասաց Մըսրա Մելիք,—<br>
+                Ուրիշներ իմ գուրզի տակն ընկնեն, կը մեռնեն։<br>
+                Դավիթ բռնեց իմ գուրզ ու չը մեռավ։<br>
+                <strong>Չէ՛, մարե, ես չեմ ընդունի.<br>
+                Դավթի վիզ տի կտրեմ։<br></strong>
+            </p>
+            <hr>
+            <h2>Իմանալ ավելին</h2>
+            <h3>Learn more</h3>
+            <p>
+              «Սասնա ծռեր» էպոսը արտացոլում է հայ ժողովրդի հերոսական ոգին և անդադար պայքարը՝ հանուն հայրենիքի պաշտպանության և ազգային ինքնության պահպանման։ Ստեղծվել է 8–9-րդ դարերին։ Էպոսի հերոսները միայն թշնամիներին հակազդող մարտիկներ չէին, այլ նաև նվիրված էին իրենց ժողովրդին՝ օգնելով առօրյա կյանքում առաջացած խնդիրների և գործերի լուծման մեջ։ Թեև նրանք օժտված էին գերբնական ուժերով, նրանց կերպարները պատմության էջերում առանձնանում են իրենց մարդասիրությամբ, անկեղծությամբ և երբեմն էլ միամտությամբ։
+            </p>
+            <p class="trans">
+              The Daredevils of Sassoun epic reflects the heroic spirit of the Armenian people and their ongoing struggle to defend their homeland and preserve their national identity. It was created during the 8th–9th centuries. The heroes of the epic were not only warriors who fought against enemies, but were also devoted to their people, always prepared to lend a helping hand. Even though they had supernatural strength, they stood out in history for their kindness, honesty, and even occasionally their naivety.
+            </p>
+            <p>
+              Էպոսը կազմված է չորս ճյուղեից,  որոնցից յուրաքանչյուրը կոչվել է տվյալ ճյուղի  գլխավոր հերոսի անունով՝ «Սանասար և Բաղդասար», «Մեծ Մհեր», «Սասունցի Դավիթ» և «Փոքր Մհեր»։ Այս չորս ճյուղերը ներկայացնում են չորս սերունդներ, որոնք իրար հետ կապված են ազգակցական կապերով։ «Սասնա ծռեր» էպոսը ծագել է հայկական լեռնաշխարհի հին քաղաքներից մեկում՝ Սասունում, որտեղից էլ ստացել է իր անունը։ Սասունցիները հայտնի էին իրենց հայրենասիրությամբ, հողի նկատմամբ առանձնահատուկ սիրով, ինչպես նաև որոշ չափով յուրահատուկ՝ «ծուռ» բնավորությամբ, որն էլ հաճախ երևում է էպոսի հերոսների վարքագծում։
+            </p>
+            <p class="trans">
+              The epic is made up of four branches, each named after the main hero of that section: Sanasar and Baghdasar, Great Mher (the First) , David of Sassoun, and Little Mher (the Second). These four branches represent the stories of members from four generations of a family. The epic originated in one of the ancient towns of the Armenian Highlands, Sassoun, which is also where it gets its name. The people of Sassoun were known for their love and respect for their homeland and uniquely “stubborn” character, which is also seen in the behavior of the epic’s heroes.
+            </p>
+            <p>
+              Էպոսը փոխանցվել է բանավոր ձևով՝ տարբեր պատումների միջոցով, որոնք պահպանվել են հայոց աշխարհի տարբեր շրջաններում։ Առանձնանում են Մշո, Մոկաց և Սասնա պատումները։ Համահավաքը՝ այսինքն էպոսի տարբեր պատումների հիման վրա կազմված միացյալ տարբերակը, նպատակ ունի ներկայացնելու էպոսի ամբողջական կառուցվածքը՝ առանց տարածաշրջանային տարբերակների բաշխման։ Էպոսի համահավաք տարբերակը հրատարակվել է 1874 թվականին։ Հետագայում համահավաքի կազմման աշխատանքներն իրականացվել են Մանուկ Աբեղյանի ղեկավարությամբ՝ մի խումբ գիտնականների մասնակցությամբ, որոնք համադրել են պատումները և ձևավորել մեկ ամբողջական տեքստ։
+            </p>
+            <p class="trans">
+              The epic was passed down orally through different versions preserved in various regions of historical Armenia. The main known versions are from Mush, Mokk, and Sassoun. The hamahavak (unified version), which combines different versions of the epic into one complete structure, was created to present the full story without separating it by regional variants. The unified version of the epic was published in 1874. Later, the compilation of the hamahavak was led by Manuk Abeghyan with a team of scholars who collected and organized the different versions into one complete text.
+            </p>
+            <p>
+              <em>«Սասնա ծռեր» էպոսի ո՞ր հերոսն ես դու</em> խաղը ստեղծվել է վերոնշյալ համահավաք բնագրի հիման վրա։ 
+            </p>
+            <p class="trans">
+              The quiz <em>Which Daredevils of Sassoun Hero Are You?</em> was created based on this unified version of the epic.
+            </p>
+            <br>
+            <p><b>Տեսանյութներ (Videos)</b></p>
+              <p><a href="https://youtu.be/_VJkXAykIOQ?si=h3_--vQ393w4FIjE">«Սասնա ծռեր» էպոս – համառոտ տեսանյութ</a></p>
+              <p><a href="https://www.youtube.com/watch?v=I-BKvMHILtw&ab_channel=%3A%D4%B2%D5%B8%D6%82%D5%B6TV">«Սասնա ծռեր» էպոսի պատումները – Հայկ Համբարձումյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=GGAP8cKCeD0&ab_channel=ShoghakatTVcompany">Ո՞ր բնագրով կարդալ էպոսը - Հայկ Համբարձումյան և Արքմենիկ Նիկողոսյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=Y1KLupAE94Q&ab_channel=ShoghakatTVcompany">«Սասնա ծռեր» էպոսի հայտնությունը - Հայկ Համբարձումյան և Արքմենիկ Նիկողոսյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=kudxQSW8blM&ab_channel=ShoghakatTVcompany">Էպոսի արդիականությունը - Հայկ Համբարձումյան և Ազատ Եղյազարյան</a></p>
+              <p><a href="https://www.youtube.com/watch?v=L51LsAiNU2c&ab_channel=ShoghakatTVcompany">«Սասնա ծռեր» էպոսի նոր համահավաք բնագիրը - Անահիտ Մարգարյանի և Հայկ Համբարձումյանի զրույցը</a></p>
+              <p><a href="https://www.youtube.com/watch?v=w5fqEx3xHzk&ab_channel=evnmag">Հարցուփորձ #1 | Էպոսագետ Հայկ Համբարձումյանը՝ «Սասնա ծռերի» մասին</a></p>
+            <p><b>Ֆիլմեր (Films)</b></p>
+              <p><a href="https://youtu.be/qXnTOE22d4g?si=m2ZID71rvwzXEIPv">«Սասունցի Դավիթ» մուլտֆիլմ</a></p>
+              <p><a href="https://youtu.be/0nxmzC9aoTs?si=MNW6oKt_yQ4kX9gi">«Ճանապարհ դեպի Սասունցի Դավիթ» – ֆիլմ</a></p>
+            <p><b>Հոդվածներ (Articles)</b></p>
+              <p><a href="https://agbu.org/am/node/6483">Armenian Super Heroes - Lusine Minasyan (AGBU)</a></p>
+              <p><a href="https://melinezhamkochyanblog.wordpress.com/2021/11/19/%D5%BD%D5%A1%D5%BD%D5%B6%D5%A1-%D5%AE%D5%BC%D5%A5%D6%80%E2%80%A4-%D5%BE%D5%A5%D6%80%D5%AC%D5%B8%D6%82%D5%AE%D5%B8%D6%82%D5%A9%D5%B5%D5%B8%D6%82%D5%B6/">Սասնա ծռեր․ վերլուծություն - Մխիթար Սեբաստացի կրթահամալիր «Ավագ դպրոց»-ի 12-րդ դասարանի աշակերտուհի Մելինե Ժամկոչյան</a></p>
+              <p><a href="https://www.academia.edu/5669112/%D5%84%D5%AB_%D5%A4%D5%AB%D5%BF%D5%A1%D6%80%D5%AF%D5%B8%D6%82%D5%B4_%D4%BD%D5%A1%D5%B9_%D5%8A%D5%A1%D5%BF%D5%A1%D6%80%D5%A1%D5%A6%D5%AB%D5%AB_%D5%BE%D5%A5%D6%80%D5%A1%D5%A2%D5%A5%D6%80%D5%B5%D5%A1%D5%AC_A_note_on_Xa%C4%8D_Patarazi_">Մի դիտարկում Խաչ Պատարազիի վերաբերյալ (A note on Xač‘ Patarazi) - Հրաչ Մարտիրոսյան</a></p>
+              <p><a href="https://surl.lu/vjoezf">«Վահագնի երգը» և հայկական էպոսը (նոր տեսակետ հայկական էպոսի ծագման և ձևավորման վերաբերյալ)․ The "song of Vahagn" and the Armenian epic (a new view on the origin and formation of the Armenian epic)) - Արմեն Պետրոսյան</a></p>              
+            <p><b>Գրքեր (Books)</b></p>
+              <p><a href="http://publishing.ysu.am/files/Sasna_Tsrer.pdf">Սասնա Ծռեր. պատում, մոտիվ, գրքային ավանդույթ – լիարժեք PDF բնագիր՝ Հայկ Համբարձումյանի խմբագրությամբ, ԵՊՀ հրատարակություն, 2018</a></p>
+              <p><a href="https://www.goodreads.com/book/show/59741253">Ազատ Եղիազարյան. «Սասնա ծռեր» էպոսի պոետիկան, «Անթարես» հրատ., 2013: հայերենից թարգմանեց Ս. Պիտեր Քաուին, Կոստա Մեսա, Կալիֆորնիա, «Մազդա» հրատ., 2008</a></p>
+            <p><b>Աուդիոգրքեր (Audiobooks)</b></p>
+              <p><a href="https://www.youtube.com/watch?v=LIs5gnlWxEk&ab_channel=IrinaMinasyan">Daredevils of Sassoun / Sasuntsi Davit / Armenian heroic epic poem - Իրինա Մինասյան։ Համահավաքի սկզբի մասը, որը ներառում է առաջին ճյուղի մի հատված։</a></p>
+              <p><a href="https://youtube.com/playlist?list=PL9GY4_i2mPxXrfQKevbX-b66FVNm3wsxK&si=moa1Hl1ZWO7VM6nh">«Սասնա ծռեր» (պատում) - Ռադիո Հեքիաթ։ Սա պատում է, համահավաքը չէ։</a></p>
+              <p><a href="https://www.youtube.com/watch?v=LUoLSSfo61c&ab_channel=AlphaNewsArmeniannewsnetwork">«Սասնա Ծռեր» – «Սասունցի Դավիթ»։ Սա միայն մի հատված է։</a></p>
+            <p><b>Նկարներ (Images)</b></p>
+              <p>Նկարները գեներացվել են ChatGPT 4.0 մոդելի կողմից:</p>
+              <p class="trans">Images were generated with the ChatGPT 4.0 model.</p>
+        </div>        `
+    };
+
+    const form     = document.getElementById('quizForm');
+    const submitBtn= document.getElementById('submitBtn');
+    const quizCont = document.getElementById('quiz');
+    const totalQuestions = document.querySelectorAll('.question').length;
+    
     form.addEventListener('change', () => {
       const allAnswered = Array.from({ length: totalQuestions }, (_, i) => {
         return form.querySelector(`input[name="q${i + 1}"]:checked`);
@@ -465,32 +1559,34 @@
       submitBtn.disabled = !allAnswered;
     });
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
 
-      const formData = new FormData(form);
-      const scores = {};
-
-      for (const key in resultText) {
-        scores[key] = 0;
-      }
-
-      for (let [_, answer] of formData.entries()) {
-        const points = scoring[answer];
-        
-        if (points) {
-          for (let type in points) {
-            scores[type] += points[type];
-            }
+        // 1. Score calculation (same as before)…
+        const formData = new FormData(form);
+        const scores = Object.keys(resultText).reduce((o,k)=> (o[k]=0,o), {});
+        for (let [, ans] of formData.entries()) {
+        const pts = scoring[ans] || {};
+        for (let h in pts) scores[h] += pts[h];
         }
-      }
 
-      const maxScore = Math.max(...Object.values(scores));
-      const tied = Object.entries(scores).filter(([_, score]) => score === maxScore);
-      const highest = tied[Math.floor(Math.random() * tied.length)];
+        // 2. Determine winner
+        const max = Math.max(...Object.values(scores));
+        const winners = Object.entries(scores).filter(([,s])=> s===max);
+        const [winner] = winners[Math.floor(Math.random() * winners.length)];
 
-      resultBox.innerHTML = `Ձեր արդյունքն է՝ ${resultText[highest[0]]}`;
-      resultBox.style.display = 'block';
+        // 3. Hide quiz
+        form.style.display = 'none';
+        submitBtn.style.display = 'none';
+        void document.documentElement.offsetHeight;
+        window.scrollTo({ top: 0, behavior: 'smooth'  });
+        document.body.scrollTop = 0;                // for older WebKit
+        document.documentElement.scrollTop = 0;     // for older Firefox/IE
+
+        // 4. Inject formatted HTML
+        const container = document.createElement('div');
+        container.innerHTML = heroDescriptions[winner] || `<p>${resultText[winner]}</p>`;
+        quizCont.appendChild(container);
     });
   </script>
 </body>
