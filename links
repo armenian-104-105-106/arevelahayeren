@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Հղումներ | UCLA Արևելահայերեն</title>
+  
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background-color: white;
+      color: black;
+    }
+
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: linear-gradient(90deg, red, blue, orange);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      flex-wrap: wrap;
+    }
+
+    .nav-logo {
+      font-size: 1.75rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    #home {
+      height: calc(100vh - 80px); 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    #home h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1rem;
+    }
+
+    #home h1 {
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      margin-bottom: 1rem;
+    }
+
+    #home p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+      }
+      .nav-links {
+        justify-content: center;
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XZL56RTWPK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XZL56RTWPK');
+</script>
+
+<body>
+
+  <nav>
+    <div class="nav-logo">UCLA Արևելահայերեն</div>
+    <div class="nav-links">
+      <a href="index.html">Գլխավոր</a>
+      <a href="quiz.html">«Սասնա Ծռեր»</a>
+      <a href="links.html">Հղումներ</a>
+    </div>
+  </nav>
+
+  <section">
+    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSePMsMdyXMXyz6-lvS_eJNwgaMfv3-0Q_sajhpNte1o8jQLmg/viewform">Ներածական հարցեր «Սասնա Ծռեր» էպոսի մասին / Introductory questions about the epic "Daredevils of Sassoun"</p>
+    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScoa69VRLH3PV_1-ySfHiBJSssJ-TBfCqxDjN_E09Z0C3eTLw/viewform">«Կարգին հաղորդման» հարցում</p>
+    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSc5sXMIIcndPoVDbw6mmxPLzHYlnxYdmvKNE_Aut0NSOEtFTQ/viewform">«Հայերենի դերը՝ ուսանողի կյանքում» / The Role of Armenian in Students' Lives</p>
+  </section>
+
+</body>
+</html>
