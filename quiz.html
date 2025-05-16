@@ -111,6 +111,14 @@
       box-sizing: border-box;
     }
 
+    #gform {
+        max-width: 800px;
+        margin-inline: auto;
+        display:block;
+        margin:auto;
+        padding-top:20px;
+    }
+
     .question {
       margin-bottom: 1.5rem;      
     }
@@ -264,15 +272,16 @@
       <section id="intro">
         <h1>«Սասնա Ծռեր»-ի ո՞ր հերոսն ես դու</h1>
         <br />
-        <p><em>«Սասնա Ծռերի» ո՞ր հերոսն ես դու</em> բնավորության թեստը կբացահայտի, թե հայ էպոսի հիմնական հերոսներից որի՛ կերպարին ես դու համապատասխան: 
+        <p><b>«Սասնա Ծռերի» ո՞ր հերոսն ես դու</b> բնավորության թեստը կբացահայտի, թե հայ էպոսի հիմնական հերոսներից որի՛ կերպարին ես դու համապատասխան: 
           Նեռարված են հետևյալ կերպարները՝ Ծովինար, Սանասար, Բաղդասար, Մեծ Մհեր, Իսմիլ Խաթուն, Մսրա Մելիք, Սասունցի Դավիթ, Փոքր Մհեր։
           Խաղը կազմվել է UCLA-ի «հայ հասարակության և մշակույթ» առարկայի ուսանողների կողմից: 
           Հուսով ենք՝ այս թեստը կօգնի հետաքրքրություն առաջացնելու «Սասնա ծռեր» էպոսի նկատմամբ և հնարավորություն կտա բացահայտելու ինքներդ Ձեզ։ 
           Թեստը կազմվել է ոչ էպոսագետ ուսանողների սուբյեկտիվ կարծիքի հիման վրա և կարող է չհամապատասխանել ձեր կարծիքներին և սպասելիքներին։
           <br/><br/><em>Հեղինակներ՝</em><br/>
           Ալեքս Եղիկյան, Արտակ Խաչատրյան, Գեղեցիկ Հովհաննիսյան, Մարինա Մանթաշյան, Կարինե Շահնաբաթյան, Էդվարդ Շանաքյան, Էրիկ Ջուհարյան, Հայարփի Սահակյան, Նարե Սեթանյան, Ջեքսոն Վաշբուրն
-          <br/><br/><em>Նախագծի Առաջնորդներ՝</em><br/>
-          Թերեզա Հովհաննիսյան, Մարիա Մարկոսյան</p>
+          <br/><br/><em>Նախագծի ղեկավար՝</em><br/>
+          Թերեզա Հովհաննիսյան</p><br/>
+          <p style="font-size: clamp(0.5rem, 1.5vw, 1rem);"><em>Նախագծի ընթացքը դիտարկվել է Փարիզի INALCO (IMAS) համալսարանի մագիստրանտ Մարիա Մարկոսյանի կողմից՝ վերջինիս ատենախոսության հետազոտության համար</em></p>
       </section>
 
       <br/>
@@ -440,7 +449,7 @@
         </div>
 
         <div class="question">
-          <p>17. Ի՞նչ կուզենայիր, որ մարդիկ ձեր մասին ասեին:</p>
+          <p>17. Ի՞նչ կուզենայիր, որ մարդիկ քո մասին ասեին:</p>
           <p class="translation question-translation">What would you like people to say about you?</p>
           
           <label><input type="radio" name="q17" value="Tsovinar1"> Իր ընտանիքին նվիրված մարդ է<br/><span class="translation">You're devoted to family</span></label>
@@ -490,6 +499,7 @@
         </div>
       </form>
     <div id="result"></div>
+    <iframe id="gform" src="https://docs.google.com/forms/d/e/1FAIpQLSeTTRq1acQI3SlCuXy4-arNAKtwBSGsNAwRVhr-tsOgFKmEsQ/viewform?embedded=true" width="800" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </div>
   <script>
     const scoring = {
@@ -958,7 +968,7 @@
                 Even though you go through a lot of hardships and often feel lonely and overworked, you must simply keep believing in yourself and remember that you are mentally strong, instead of shutting yourself away and isolating yourself from the world.
             </p>
             <p>
-                Փոքր Մհերը Սասունցի Դավթի և Խանդութ Խանդումի որդին է և սերնդի վերջին ներկայացուցիչը։ Նրան է նվիրված «Սասնա Ծռեր» էպոսի վերջին (չորրորդ) ճյուղը։ Մհերը ամուսնանում է Գոհարի հետ, բայց այդպես էլ անժառանգ է մնում հոր անեցքի պատճառով։  Նրա կյանքը անցնում է շատ միայնակ և տխուր։ Ըստ ավադնության՝ նա փակվում է Ագռավաքար ժայռի մեջ և հազվադեպ է դուրս  գալիս։ 
+                Փոքր Մհերը Սասունցի Դավթի և Խանդութ Խանդումի որդին է և սերնդի վերջին ներկայացուցիչը։ Նրան է նվիրված «Սասնա Ծռեր» էպոսի վերջին (չորրորդ) ճյուղը։ Մհերը ամուսնանում է Գոհարի հետ, բայց այդպես էլ անժառանգ է մնում հոր անեծքի պատճառով։  Նրա կյանքը անցնում է շատ միայնակ և տխուր։ Ըստ ավադնության՝ նա փակվում է Ագռավաքար ժայռի մեջ և հազվադեպ է դուրս  գալիս։ 
             </p>
             <p class="trans">
                 Little Mher is the son of Davit of Sassoun and Khandout Khandum and is the last representation of the generations. The fourth and final branch is dedicated to him. Mher the Younger is married to Gohar, but remains heirless due to his father’s actions. His life passes in a very sad and lonely manner; according to tradition, he locks himself in Agravakar rock and rarely comes out.
